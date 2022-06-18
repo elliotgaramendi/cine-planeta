@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import { useSelector } from "react-redux";
+import CinemasSlide from "./CinemasSlide";
 
 const CinemasSlider = () => {
   const settings = {
@@ -30,9 +31,10 @@ const CinemasSlider = () => {
       <Slider {...settings}>
         {premieres.map((premiere) => {
           return (
-            <figure key={premiere.description} className="slick__slide-figure">
-              <img src={premiere.image} alt={premiere.description} className="slick__slide-img" />
-            </figure>
+            <CinemasSlide
+              key={premiere.description}
+              premiere={premiere}
+            />
           );
         })}
       </Slider>
