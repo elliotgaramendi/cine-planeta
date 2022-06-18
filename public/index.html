@@ -23,6 +23,50 @@
       }
     }
 
+    :root {
+      scroll-behavior: smooth;
+      --primary-theme-color: #fff;
+      --secondary-theme-color: #f5f5f5;
+      --primary-text-color: #004a8c;
+      --secondary-text-color: #000000;
+      --tertiary-text-color: #0d1f40;
+      --quaternary-text-color: #0d1f40bf;
+      --primary-shadow-color: #00000080;
+      --secondary-shadow-color: #0000001a;
+      --primary-highlight-color: #0050b280;
+      --secondary-highlight-color: #e50246;
+      --tertiary-highlight-color: #083c7580;
+      --quaternary-highlight-color: #d1485f;
+      --padding-container: 0 1rem;
+      --max-width-container: 1024px;
+      --secondary-border-radius: 1rem;
+      --primary-all-transitions: all 0.25s;
+      --secondary-all-transitions: all 0.5s;
+      --inverse-primary-text-color: #f5f5f5;
+      --inverse-secondary-text-color: #fff;
+      --inverse-tertiary-text-color: #dedfe3;
+    }
+
+    .body {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+    }
+
+    .body--dark {
+      --primary-theme-color: #20232a;
+      --secondary-theme-color: #282c34;
+      --primary-text-color: #0088ff;
+      --secondary-text-color: #fff;
+      --tertiary-text-color: #bebebe;
+      --quaternary-text-color: #888;
+      --primary-shadow-color: #8888;
+      --secondary-shadow-color: #eee8;
+      --inverse-secondary-text-color: #000;
+      --inverse-primary-text-color: #282c34;
+      --inverse-secondary-text-color: #000;
+      --inverse-tertiary-text-color: #222;
+    }
+
     .loader {
       position: fixed;
       top: 0;
@@ -33,6 +77,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: var(--primary-theme-color);
       transition: opacity 0.5s;
     }
 
@@ -57,13 +102,19 @@
     }
 
     .loader__spinner:before {
-      box-shadow: 0 0 0.75rem 0.125rem #0000001a inset;
+      box-shadow: 0 0 0.75rem 0.125rem var(--secondary-shadow-color) inset;
       animation: rotate 1s linear infinite;
     }
 
     .loader__spinner:after {
-      box-shadow: 0 0.25rem 0 0 #004a8c inset;
+      box-shadow: 0 0.25rem 0 0 var(--primary-text-color) inset;
       animation: rotate 1s linear infinite;
+    }
+
+    @media (min-width: 854px) {
+      :root {
+        --padding-container: 0 0.75em;
+      }
     }
   </style>
 </head>
