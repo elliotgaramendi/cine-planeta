@@ -126,6 +126,11 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root" class="root"></div>
   <script>
+    if (localStorage.getItem('darkMode') === 'false' || localStorage.getItem('darkMode') === null) {
+      document.querySelector('.body').classList.remove('body--dark');
+    } else {
+      document.querySelector('.body').classList.add('body--dark');
+    }
     window.addEventListener('load', () => {
       document.getElementById('loader').classList.add('loader--hidden');
     });

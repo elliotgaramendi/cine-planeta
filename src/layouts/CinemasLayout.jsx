@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Header from "../components/sections/Header";
 
 const CinemasLayout = () => {
   const applicationName = "🌌cineverse🌌";
@@ -9,7 +10,9 @@ const CinemasLayout = () => {
 
   return (
     <>
-      <header className="header">{applicationName}</header>
+      <Header
+        applicationName={applicationName}
+      />
       <main className="main">
         <Outlet />
       </main>
