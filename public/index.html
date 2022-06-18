@@ -6,15 +6,75 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Las mejores películas, estrenos, promociones y dulces en el mejor Cine. Contamos con las 4B Bueno, bonito, barato y bastante. Compra tus entradas de forma digital, rápido y sin colas." />
+  <meta name="description"
+    content="Las mejores películas, estrenos, promociones y dulces en el mejor Cine. Contamos con las 4B Bueno, bonito, barato y bastante. Compra tus entradas de forma digital, rápido y sin colas." />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <title>¡Bienvenido a Cineverse Perú!</title>
+
+  <style>
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+
+    .loader {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s;
+    }
+
+    .loader--hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loader__spinner {
+      position: relative;
+      width: 8rem;
+      height: 8rem;
+    }
+
+    .loader__spinner:before,
+    .loader__spinner:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .loader__spinner:before {
+      box-shadow: 0 0 0.75rem 0.125rem #0000001a inset;
+      animation: rotate 1s linear infinite;
+    }
+
+    .loader__spinner:after {
+      box-shadow: 0 0.25rem 0 0 #004a8c inset;
+      animation: rotate 1s linear infinite;
+    }
+  </style>
 </head>
 
 <body>
+  <section class="loader" id="loader">
+    <div class="loader__spinner"></div>
+  </section>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('loader').classList.add('loader--hidden');
+    });
+  </script>
 </body>
 
 </html>
