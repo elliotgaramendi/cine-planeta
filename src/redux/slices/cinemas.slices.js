@@ -1,13 +1,61 @@
 import { createSlice } from "@reduxjs/toolkit";
+import axiosInstance from "../../configs/axiosInstance";
 
 const initialState = {
-  cinemas: []
+  loading: false,
+  error: {},
+  premieres: []
 };
 
 const cinemasSlices = createSlice({
   name: 'cinemas',
   initialState,
-  reducers: {}
+  reducers: {
+    fetchReadPremieresRequest(state, action) {
+      return {
+        ...state,
+        loading: action.payload
+      };
+    },
+    fetchReadPremieresSuccess(state, action) {
+      return {
+        ...state,
+        loading: false,
+        error: {},
+        premieres: action.payload
+      };
+    },
+    fetchReadPremieresError(state, action) {
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+        premieres: []
+      };
+    },
+  }
 });
+
+const {
+  fetchReadPremieresError,
+  fetchReadPremieresRequest,
+  fetchReadPremieresSuccess
+} = cinemasSlices.actions;
+
+export const fetchReadPremieres = () => {
+  return (async (dispatch) => {
+    dispatch(fetchReadPremieresRequest(true));
+    try {
+      const options = {
+        method: 'GET',
+        url: `/premieres`
+      };
+      const { data } = await axiosInstance(options);
+      dispatch(fetchReadPremieresSuccess(data.premieres));
+    } catch (error) {
+      dispatch(fetchReadPremieresError(error));
+    }
+  });
+};
 
 export default cinemasSlices.reducer;
