@@ -1,16 +1,98 @@
 @import './mixins';
 
-.slick__slide-figure {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-}
+.slick-slider {
+  &__slide-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+  }
 
-.slick__slide-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  &__slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    top: 75%;
+    left: 2rem;
+    right: 2rem;
+    max-width: 512px;
+    @include d-flex-fd-ai-jc-g(column, flex-start, stretch, 1.5rem);
+
+    @include desktop() {
+      top: 50%;
+      gap: 2rem;
+      max-width: var(--max-width-container);
+      margin: auto;
+    }
+  }
+
+  &__content-title {
+    position: relative;
+    z-index: 5;
+    color: var(--inverse-secondary-text-color);
+    font-weight: 800;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+
+    @include desktop() {
+      font-size: 4rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: -1rem;
+      left: -1rem;
+      height: 4rem;
+      width: 10rem;
+      background-color: var(--secondary-highlight-color);
+
+      @include desktop() {
+        top: -1.25rem;
+        left: -1.25rem;
+        height: 6rem;
+        width: 16rem;
+      }
+    }
+  }
+
+  &__content-details {
+    display: none;
+
+    @include desktop() {
+      display: flex;
+      color: var(--inverse-secondary-text-color);
+      font-size: 1.125rem;
+      max-width: 512px;
+      margin: 0;
+    }
+  }
+
+  &__content-buy {
+    background-color: var(--secondary-highlight-color);
+    box-shadow: 0 0 1rem 0.125rem #e302467a;
+    color: var(--inverse-secondary-text-color);
+    font-size: 0.75rem;
+    padding: 0.5em 1em;
+    border-radius: var(--secondary-border-radius);
+    transition: var(--primary-all-transitions);
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--quaternary-highlight-color);
+    }
+
+    @include desktop() {
+      font-size: 1rem;
+    }
+  }
 }
 
 .home-gallery {
