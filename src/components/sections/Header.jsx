@@ -30,6 +30,16 @@ const Header = ({ applicationName }) => {
     headerNavMenuLinkListContainer.current.classList.remove('header-nav__menu-link-list-container--open');
   };
 
+  const documentScroll = () => {
+    if (location.pathname === '/') {
+      document.querySelector('.header').classList.toggle('header--home', window.scrollY < (window.innerHeight - 64));
+    } else {
+      header.current.classList.remove('header--home');
+    }
+  };
+
+  document.addEventListener('scroll', documentScroll);
+
   useEffect(() => {
     if (localStorage.getItem('darkMode') === 'false' || localStorage.getItem('darkMode') === null) {
       headerNavThemeIconContainer.current.classList.remove('header-nav__theme-icon-container--active');
