@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CinemasSlider from "../../components/cinemas/CinemasSlider";
 import { fetchReadPremieres } from "../../redux/slices/cinemas.slices";
 import CinemasGallery from '../../components/cinemas/CinemasGallery';
+import CinemasPartner from '../../components/cinemas/CinemasPartner';
 
 const CinemasHome = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const CinemasHome = () => {
     <>
       <CinemasSlider premieres={premieres} />
       <CinemasGallery premieres={premieres} />
+      <CinemasPartner />
     </>
   );
 };
