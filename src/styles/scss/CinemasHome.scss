@@ -1,46 +1,5 @@
 @import './mixins';
 
-.slick-slider {
-  background-color: var(--primary-shadow-color);
-
-  .slick-arrow {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  .slick-prev,
-  .slick-next {
-    z-index: 5;
-
-    &::before {
-      font-size: 3rem;
-      line-height: 4rem;
-    }
-  }
-
-  .slick-prev {
-    left: 1rem;
-  }
-
-  .slick-next {
-    right: 1rem;
-  }
-
-  .slick-dots {
-    bottom: 1rem;
-
-    & button::before {
-      color: var(--inverse-tertiary-text-color);
-      font-size: 1rem;
-    }
-
-    & .slick-active button::before {
-      color: var(--inverse-secondary-text-color);
-      font-size: 1rem;
-    }
-  }
-}
-
 .slick__slide-figure {
   display: flex;
   width: 100%;
