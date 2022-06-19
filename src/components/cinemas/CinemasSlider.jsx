@@ -1,8 +1,7 @@
 import Slider from "react-slick";
-import { useSelector } from "react-redux";
 import CinemasSlide from "./CinemasSlide";
 
-const CinemasSlider = () => {
+const CinemasSlider = ({ premieres }) => {
   const settings = {
     accessibility: true,
     dots: true,
@@ -24,21 +23,17 @@ const CinemasSlider = () => {
     ],
   };
 
-  const { premieres } = useSelector(state => state.cinemasStore);
-
   return (
-    <div>
-      <Slider {...settings}>
-        {premieres.map((premiere) => {
-          return (
-            <CinemasSlide
-              key={premiere.description}
-              premiere={premiere}
-            />
-          );
-        })}
-      </Slider>
-    </div>
+    <Slider {...settings}>
+      {premieres.map((premiere) => {
+        return (
+          <CinemasSlide
+            key={premiere.description}
+            premiere={premiere}
+          />
+        );
+      })}
+    </Slider>
   );
 };
 

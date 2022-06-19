@@ -17,7 +17,7 @@ const CinemasHome = () => {
 
   return (
     <>
-      <CinemasSlider />
+      <CinemasSlider premieres={premieres} />
       <CinemasGallery premieres={premieres} />
     </>
   );
