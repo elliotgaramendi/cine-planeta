@@ -1,8 +1,9 @@
 @import './mixins';
 
 .slick-slider {
-  .slick-arrow {
+  background-color: var(--primary-shadow-color);
 
+  .slick-arrow {
     width: 4rem;
     height: 4rem;
   }
@@ -32,6 +33,7 @@
       color: var(--inverse-tertiary-text-color);
       font-size: 1rem;
     }
+
     & .slick-active button::before {
       color: var(--inverse-secondary-text-color);
       font-size: 1rem;
@@ -46,7 +48,7 @@
   margin: 0;
 }
 
-.slick__slide-img {
+.slick__slide-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
