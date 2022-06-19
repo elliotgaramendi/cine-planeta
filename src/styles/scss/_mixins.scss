@@ -12,7 +12,7 @@
   padding: var(--padding-container);
 }
 
-@mixin button($background-color: var(--primary-button-color), $box-shadow: #0050b280, $border-radius: var(--secondary-border-radius), $font-size: 0.75rem, $font-weight: 400, $padding: 0.25em 1em, $active-button-color: var(--primary-active-button-color)) {
+@mixin button($background-color: var(--primary-button-color), $box-shadow: #0050b280, $border-radius: var(--primary-border-radius), $font-size: 0.75rem, $font-weight: 400, $padding: 0.25em 1em, $active-button-color: var(--primary-active-button-color)) {
   background-color: $background-color;
   box-shadow: 0 0 1rem 0.125rem $box-shadow;
   border: none;

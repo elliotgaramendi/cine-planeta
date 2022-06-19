@@ -52,7 +52,7 @@
       bottom: -0.25rem;
       width: 0;
       height: 0.125rem;
-      background-color: var(--secondary-highlight-color);
+      background-color: var(--secondary-button-color);
       transition: var(--primary-all-transitions);
     }
 
@@ -190,7 +190,7 @@
       bottom: -0.25rem;
       width: 0;
       height: 0.125rem;
-      background-color: var(--secondary-highlight-color);
+      background-color: var(--secondary-button-color);
       transition: var(--primary-all-transitions);
     }
 
@@ -248,7 +248,7 @@
     position: absolute;
     top: -37.5%;
     left: -150%;
-    @include button(var(--secondary-button-color), #e302467a, var(--secondary-border-radius), 0.75rem, 400, 0.0625em 0.5em, var(--secondary-active-button-color));
+    @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.0625em 0.5em, var(--secondary-active-button-color));
     animation: blink 2.5s linear infinite alternate;
     transition: var(--secondary-all-transitions);
 
@@ -271,7 +271,7 @@
     @include d-flex-fd-ai-jc-g(row, center);
     background-color: var(--primary-text-color);
     border: 0;
-    border-radius: var(--secondary-border-radius);
+    border-radius: var(--primary-border-radius);
     cursor: pointer;
     padding: 0 0.125rem;
     transition: var(--primary-all-transitions);

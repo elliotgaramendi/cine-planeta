@@ -1,11 +1,11 @@
 @keyframes blink {
   0% {
-    background-color: var(--secondary-highlight-color);
-    box-shadow: 0 0 0.75rem 0 var(--secondary-highlight-color);
+    background-color: var(--secondary-button-color);
+    box-shadow: 0 0 0.75rem 0 var(--secondary-button-color);
   }
 
   100% {
-    background-color: var(--quaternary-highlight-color);
-    box-shadow: 0 0 0.25rem var(--quaternary-highlight-color);
+    background-color: var(--secondary-active-button-color);
+    box-shadow: 0 0 0.25rem var(--secondary-active-button-color);
   }
 }

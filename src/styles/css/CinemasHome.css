@@ -40,12 +40,12 @@
 }
 
 .slick-slider .slick-dots button::before {
-  color: var(--inverse-tertiary-text-color);
+  color: var(--primary-button-text-color);
   font-size: 1rem;
   transition: var(--secondary-all-transitions);
 }
 
 .slick-slider .slick-dots .slick-active button::before {
-  color: var(--inverse-secondary-text-color);
+  color: var(--primary-button-text-color);
   font-size: 1.25rem;
 }

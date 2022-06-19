@@ -35,11 +35,10 @@
       --primary-shadow-color: #00000080;
       --secondary-shadow-color: #0000001a;
       --tertiary-shadow-color: #083c7580;
-      --primary-highlight-color: #0050b2;
-      --secondary-highlight-color: #e50246;
-      --tertiary-highlight-color: #00397f;
-      /* --quaternary-highlight-color: #d1485f; */
-      --quaternary-highlight-color: #b20237;
+      /* --primary-highlight-color: #0050b2; */
+      /* --secondary-highlight-color: #e50246; */
+      /* --tertiary-highlight-color: #00397f; */
+      /* --quaternary-highlight-color: #b20237; */
       --primary-button-color: #0050b2;
       --secondary-button-color: #e50246;
       --primary-button-text-color: #fff;
@@ -48,7 +47,7 @@
       --padding-section: 3rem 0;
       --padding-container: 0 1rem;
       --max-width-container: 1024px;
-      --secondary-border-radius: 1rem;
+      --primary-border-radius: 1rem;
       --primary-all-transitions: all 0.25s;
       --secondary-all-transitions: all 0.5s;
       --inverse-primary-text-color: #f5f5f5;
@@ -102,8 +101,8 @@
       height: 8rem;
     }
 
-    .loader__spinner:before,
-    .loader__spinner:after {
+    .loader__spinner::before,
+    .loader__spinner::after {
       content: '';
       position: absolute;
       width: 100%;
@@ -111,12 +110,11 @@
       border-radius: 50%;
     }
 
-    .loader__spinner:before {
+    .loader__spinner::before {
       box-shadow: 0 0 0.75rem 0.125rem var(--secondary-shadow-color) inset;
-      animation: rotate 1s linear infinite;
     }
 
-    .loader__spinner:after {
+    .loader__spinner::after {
       box-shadow: 0 0.25rem 0 0 var(--primary-text-color) inset;
       animation: rotate 1s linear infinite;
     }
