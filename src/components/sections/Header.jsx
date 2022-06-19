@@ -32,15 +32,32 @@ const Header = ({ applicationName }) => {
 
   const documentScroll = () => {
     if (location.pathname === '/') {
-      document.querySelector('.header').classList.toggle('header--home', window.scrollY < (window.innerHeight - 64));
+      header.current?.classList.toggle('header--home', window.scrollY < (window.innerHeight - 64));
     } else {
-      header.current.classList.remove('header--home');
+      header.current?.classList.remove('header--home');
     }
   };
 
   document.addEventListener('scroll', documentScroll);
 
   useEffect(() => {
+    // const intersectionObserverSection = new IntersectionObserver((entries) => {
+    //   entries.forEach((entry) => {
+    //     if (entry.isIntersecting) {
+    //       if (entry.target.classList.contains('slick-slider')) {
+    //         console.log('slider');
+    //         header.current.classList.add('header--home');
+    //       } else {
+    //         console.log('not slider');
+    //         header.current.classList.remove('header--home');
+    //       }
+    //     }
+    //   });
+    // }, { rootMargin: '-7.5% 0px -92.5% 0px' });
+
+    // intersectionObserverSection.observe(document.querySelector('.home-gallery'));
+    // intersectionObserverSection.observe(document.querySelector('.slick-slider'));
+
     if (localStorage.getItem('darkMode') === 'false' || localStorage.getItem('darkMode') === null) {
       headerNavThemeIconContainer.current.classList.remove('header-nav__theme-icon-container--active');
     } else {
