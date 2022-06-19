@@ -76,18 +76,8 @@
   }
 
   &__content-buy {
-    background-color: var(--secondary-highlight-color);
-    box-shadow: 0 0 1rem 0.125rem #e302467a;
-    color: var(--inverse-secondary-text-color);
-    font-size: 0.75rem;
-    padding: 0.5em 1em;
-    border-radius: var(--secondary-border-radius);
-    transition: var(--primary-all-transitions);
+    @include button(var(--secondary-button-color), #e302467a, var(--secondary-border-radius), 0.75rem, 400, 0.5em 1em, var(--secondary-active-button-color));
     text-decoration: none;
-
-    &:hover {
-      background-color: var(--quaternary-highlight-color);
-    }
 
     @include desktop() {
       font-size: 1rem;
@@ -216,7 +206,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    @include d-flex-fd-ai-jc-g(column, center, center, 2rem);
+    @include d-flex-fd-ai-jc-g(column, center, center, 1rem);
     transform: translate(-50%, -50%);
     opacity: 0;
     pointer-events: none;
@@ -224,32 +214,11 @@
   }
 
   &__card-buy {
-    background-color: var(--secondary-highlight-color);
-    box-shadow: 0 0 1rem 0.125rem #e302467a;
-    color: var(--inverse-secondary-text-color);
-    font-size: 0.75rem;
-    padding: 0.25rem 1rem;
-    border-radius: var(--secondary-border-radius);
-    transition: var(--primary-all-transitions);
+    @include button(var(--secondary-button-color), #e302467a, var(--secondary-border-radius), 0.75rem, 400, 0.25em 1em, var(--secondary-active-button-color));
     text-decoration: none;
-
-    &:hover {
-      background-color: var(--quaternary-highlight-color);
-    }
   }
 
   &__card-description {
-    background-color: var(--primary-highlight-color);
-    box-shadow: 0 0 1rem 0.125rem #0050b280;
-    color: var(--inverse-secondary-text-color);
-    font-size: 0.75rem;
-    padding: 0.25rem 1rem;
-    border-radius: var(--secondary-border-radius);
-    transition: var(--primary-all-transitions);
-    text-decoration: none;
-
-    &:hover {
-      background-color: var(--tertiary-highlight-color);
-    }
+    @include button(var(--primary-button-color), #0050b280, var(--secondary-border-radius), 0.75rem, 400, 0.25em 1em, var(--primary-active-button-color));
   }
 }

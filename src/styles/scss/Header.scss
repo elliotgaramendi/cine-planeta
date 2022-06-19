@@ -248,11 +248,7 @@
     position: absolute;
     top: -37.5%;
     left: -150%;
-    background-color: var(--secondary-highlight-color);
-    color: var(--inverse-secondary-text-color);
-    font-size: 0.75rem;
-    padding: 0.0625rem 0.5rem;
-    border-radius: var(--secondary-border-radius);
+    @include button(var(--secondary-button-color), #e302467a, var(--secondary-border-radius), 0.75rem, 400, 0.0625em 0.5em, var(--secondary-active-button-color));
     animation: blink 2.5s linear infinite alternate;
     transition: var(--secondary-all-transitions);
 
