@@ -22,11 +22,15 @@
           color: var(--inverse-secondary-text-color);
         }
 
-        &--hover {
+        &:hover {
           color: var(--inverse-primary-text-color);
         }
       }
     }
+  }
+
+  &--open {
+    left: 80%;
   }
 
   &--home {
@@ -60,10 +64,6 @@
     & .header-nav__person-icon {
       fill: var(--inverse-secondary-text-color);
     }
-  }
-
-  &--open {
-    left: 80%;
   }
 }
 
