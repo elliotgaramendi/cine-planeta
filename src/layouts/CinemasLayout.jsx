@@ -1,14 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/sections/Footer";
 import Header from "../components/sections/Header";
+import { applicationName, credits } from "../utils/generalInformation";
 
 const CinemasLayout = () => {
-  const applicationName = "🌌cineverse🌌";
-  const credits = {
-    year: new Date().getFullYear(),
-    author: 'ELGS'
-  };
-
   return (
     <>
       <Header

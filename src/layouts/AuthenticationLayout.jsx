@@ -1,11 +1,7 @@
 import { Outlet } from "react-router-dom";
+import { applicationName, credits } from "../utils/generalInformation";
 
 const AuthenticationLayout = () => {
-  const applicationName = "🌌cineverse🌌";
-  const credits = {
-    year: new Date().getFullYear(),
-    author: 'ELGS'
-  };
   const { year, author } = credits;
 
   return (
@@ -21,6 +17,6 @@ const AuthenticationLayout = () => {
       </footer>
     </>
   );
-}
+};
 
 export default AuthenticationLayout;
