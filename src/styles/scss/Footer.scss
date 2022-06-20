@@ -10,9 +10,7 @@
   padding: var(--padding-section);
 
   &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    @include d-grid-gtc-g(1fr 1fr, 2.5rem);
     @include container;
 
     @include desktop() {
@@ -175,9 +173,7 @@
   }
 
   &__mobile-image-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    @include d-grid-gtc-g(1fr 1fr, 1rem);
     justify-items: center;
 
     @include desktop() {

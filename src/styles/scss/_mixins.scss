@@ -1,3 +1,9 @@
+@mixin container {
+  max-width: var(--max-width-container);
+  margin: auto;
+  padding: var(--padding-container);
+}
+
 @mixin d-flex-fd-ai-jc-g($flex-direction: row, $align-items: stretch, $justify-content: stretch, $gap: 0) {
   display: flex;
   flex-direction: $flex-direction;
@@ -6,10 +12,10 @@
   gap: $gap;
 }
 
-@mixin container {
-  max-width: var(--max-width-container);
-  margin: auto;
-  padding: var(--padding-container);
+@mixin d-grid-gtc-g($grid-template-columns: 1fr, $gap: 0) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  gap: $gap;
 }
 
 @mixin button($background-color: var(--primary-button-color), $box-shadow: #0050b280, $border-radius: var(--primary-border-radius), $font-size: 0.75rem, $font-weight: 400, $padding: 0.25em 1em, $active-button-color: var(--primary-active-button-color)) {
