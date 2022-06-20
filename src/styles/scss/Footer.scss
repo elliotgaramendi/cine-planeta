@@ -3,11 +3,13 @@
 .footer {
   box-shadow: 0 0 0.75rem 0 var(--primary-shadow-color);
   margin-top: auto;
+  transition: var(--secondary-all-transitions);
 }
 
 .footer-nav {
   background-color: var(--tertiary-text-color);
   padding: var(--padding-section);
+  transition: var(--secondary-all-transitions);
 
   &__container {
     @include d-grid-gtc-g(1fr 1fr, 2.5rem);
@@ -63,6 +65,7 @@
     color: var(--inverse-secondary-text-color);
     font-size: 0.75rem;
     margin: 0;
+    transition: var(--primary-all-transitions);
 
     @include desktop() {
       font-size: 1rem;
@@ -166,6 +169,7 @@
     color: var(--inverse-secondary-text-color);
     font-size: 0.75rem;
     margin: 0;
+    transition: var(--primary-all-transitions);
 
     @include desktop() {
       font-size: 1rem;
@@ -209,6 +213,7 @@
     font-weight: 700;
     font-size: 0.75rem;
     margin: 0;
+    transition: var(--primary-all-transitions);
 
     @include desktop() {
       font-size: 1rem;
@@ -219,6 +224,7 @@
     color: var(--inverse-secondary-text-color);
     font-size: 0.75rem;
     margin: 0;
+    transition: var(--primary-all-transitions);
 
     @include desktop() {
       font-size: 1rem;
@@ -227,6 +233,7 @@
 
   &__info-message-link {
     color: var(--secondary-button-color);
+    transition: var(--primary-all-transitions);
   }
 }
 
@@ -234,6 +241,7 @@
   background-color: var(--primary-theme-color);
   border-top: 0.25rem solid var(--secondary-button-color);
   padding: 1.5rem 0;
+  transition: var(--secondary-all-transitions);
 
   @include desktop() {
     border-top: 0.375rem solid var(--secondary-button-color);
@@ -252,6 +260,7 @@
     font-size: 0.625rem;
     margin: 0;
     text-decoration: none;
+    transition: var(--primary-all-transitions);
 
     @include desktop() {
       font-size: 0.875rem;
@@ -268,6 +277,7 @@
 
   &__subtitle-author {
     color: var(--secondary-button-color);
+    transition: var(--primary-all-transitions);
   }
 
   &__subtitle-icon {
