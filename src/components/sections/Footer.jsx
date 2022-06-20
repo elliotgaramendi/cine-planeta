@@ -26,7 +26,7 @@ const Footer = ({ credits }) => {
             </li>
             <li className="footer-nav__link-item">
               <Link to="/" className="footer-nav__link">
-                Ventas Corporativas
+                Ventas corporativas
               </Link>
             </li>
             <li className="footer-nav__link-item">
@@ -41,7 +41,7 @@ const Footer = ({ credits }) => {
             </li>
             <li className="footer-nav__link-item">
               <Link to="/" className="footer-nav__link">
-                Reglas de Convivencia
+                Reglas de convivencia
               </Link>
             </li>
             <li className="footer-nav__link-item">
@@ -80,7 +80,7 @@ const Footer = ({ credits }) => {
           </div>
           <div className="footer-nav__mobile-info">
             <div className="footer-nav__mobile">
-              <p className="footer-nav__mobile-message">El universo Cineverse también está al alcance de tus dedos.</p>
+              <p className="footer-nav__mobile-message">Cineverse también está al alcance de tus dedos.</p>
               <div className="footer-nav__mobile-image-container">
                 <Link to="/" className="footer-nav__mobile-image-link"><img src="https://es.logodownload.org/wp-content/uploads/2019/06/disponible-en-google-play-badge-1.png" alt="Disponible en Google Play" className="footer-nav__mobile-image" /></Link>
                 <Link to="/" className="footer-nav__mobile-image-link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Download_on_the_App_Store_Badge_ESMX_RGB_blk.svg/1280px-Download_on_the_App_Store_Badge_ESMX_RGB_blk.svg.png" alt="Descárgalo en el App Store" className="footer-nav__mobile-image" /></Link>
@@ -98,8 +98,8 @@ const Footer = ({ credits }) => {
       <nav className="footer-nav-footer">
         <div className="footer-nav-footer__container">
           <Link to="/" className="footer-nav-footer__subtitle">Condiciones de uso y seguridad</Link>
-          <h5 className="footer-nav-footer__subtitle">Copyright &copy; {currentYear} <Link to="https://www.linkedin.com/in/elliotgaramendi/" className="footer-nav-footer__subtitle-author" target="_blank" rel="noreferrer">{author}</Link></h5>
-          <Link to="/" className="footer-nav-footer__subtitle footer-nav-footer__subtitle--icon"><span className="footer-nav-footer__subtitle-icon"><i className="bi bi-book"></i></span> Libro de Reclamaciones</Link>
+          <h5 className="footer-nav-footer__subtitle">Copyright &copy; {currentYear} <a href="https://www.linkedin.com/in/elliotgaramendi/" className="footer-nav-footer__subtitle-author" target="_blank" rel="noopener noreferrer">{author}</a></h5>
+          <Link to="/" className="footer-nav-footer__subtitle footer-nav-footer__subtitle--icon"><span className="footer-nav-footer__subtitle-icon"><i className="bi bi-book"></i></span> Libro de reclamaciones</Link>
         </div>
       </nav>
     </footer>
