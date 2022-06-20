@@ -39,7 +39,7 @@
     background-image: linear-gradient(var(--primary-shadow-color), var(--secondary-shadow-color));
 
     & .header-nav__menu-icon {
-      fill: var(--inverse-secondary-text-color);
+      color: var(--inverse-secondary-text-color);
     }
 
     & .header-nav__link-logo-container {
@@ -62,8 +62,8 @@
       width: 100%;
     }
 
-    & .header-nav__person-icon {
-      fill: var(--inverse-secondary-text-color);
+    & .header-nav__person-container {
+      color: var(--inverse-secondary-text-color);
     }
   }
 }
@@ -80,25 +80,22 @@
     @include container;
   }
 
-  &__menu-icon-container {
+  &__menu-icon {
     background-color: transparent;
     border: 0;
+    color: var(--tertiary-text-color);
     width: 1.5rem;
     height: 1.5rem;
+    @include d-flex-fd-ai-jc-g(row, center, center, 0);
+    font-size: 1.375rem;
+    line-height: 1.375rem;
     padding: 0;
     cursor: pointer;
+    transition: var(--secondary-all-transitions);
 
     @include desktop() {
       display: none;
     }
-  }
-
-  &__menu-icon {
-    fill: var(--tertiary-text-color);
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: var(--secondary-all-transitions);
   }
 
   &__link-logo-container {
@@ -205,25 +202,22 @@
     }
   }
 
-  &__menu-close-icon-container {
+  &__menu-close-icon {
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
     width: 1.5rem;
     height: 1.5rem;
+    @include d-flex-fd-ai-jc-g(row, center, center, 0);
+    color: var(--secondary-text-color);
+    font-size: 1.375rem;
+    line-height: 1.375rem;
     cursor: pointer;
+    transition: var(--secondary-all-transitions);
 
     @include desktop() {
       display: none;
     }
-  }
-
-  &__menu-close-icon {
-    fill: var(--secondary-text-color);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--secondary-all-transitions);
   }
 
   &__person-theme-container {
@@ -238,14 +232,22 @@
     position: relative;
     width: 1.5rem;
     height: 1.5rem;
+    @include d-flex-fd-ai-jc-g(row, center, center, 0);
+    color: var(--tertiary-text-color);
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    transition: var(--secondary-all-transitions);
 
     @include desktop() {
       width: 1.75rem;
       height: 1.75rem;
+      font-size: 1.75rem;
+      line-height: 1.75rem;
     }
   }
 
   &__person-message {
+    line-height: normal;
     position: absolute;
     top: -37.5%;
     left: -150%;
@@ -255,27 +257,24 @@
 
     @include desktop() {
       top: -50%;
-      left: 50%;
+      left: 25%;
     }
-  }
-
-  &__person-icon {
-    fill: var(--tertiary-text-color);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--secondary-all-transitions);
   }
 
   &__theme-icon-container {
     position: relative;
-    @include d-flex-fd-ai-jc-g(row, center);
+    @include d-flex-fd-ai-jc-g(row, center, center, 0.25rem);
     background-color: var(--primary-text-color);
     border: 0;
     border-radius: var(--primary-border-radius);
+    padding: 0.125rem 0.375rem;
     cursor: pointer;
-    padding: 0 0.125rem;
     transition: var(--primary-all-transitions);
+
+    @include desktop() {
+      gap: 0.375rem;
+      padding: 0.25rem 0.5rem;
+    }
 
     &::after {
       content: '';
@@ -286,15 +285,15 @@
       height: 1.25rem;
       border-radius: 50%;
       box-shadow:
-        0 0 0.125rem 0 var(--primary-shadow-color),
+        0 0 0 0.125rem var(--primary-shadow-color),
         0 0 0.25rem 0 var(--primary-shadow-color),
         0 0 0.375rem 0 var(--primary-shadow-color),
         0 0 0.5rem 0 var(--primary-shadow-color);
       transition: var(--primary-all-transitions);
 
       @include desktop() {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.625rem;
+        height: 1.625rem;
       }
     }
 
@@ -304,10 +303,20 @@
   }
 
   &__theme-icon {
+    position: relative;
+    width: 0.75rem;
+    height: 0.75rem;
+    @include d-flex-fd-ai-jc-g(row, center, center, 0);
+    color: var(--primary-button-text-color);
     font-size: 0.75rem;
+    line-height: 0.75rem;
+    transition: var(--secondary-all-transitions);
 
     @include desktop() {
+      width: 1rem;
+      height: 1rem;
       font-size: 1rem;
+      line-height: 1rem;
     }
   }
 }
