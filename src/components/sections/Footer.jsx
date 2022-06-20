@@ -99,7 +99,7 @@ const Footer = ({ credits }) => {
         <div className="footer-nav-footer__container">
           <Link to="/" className="footer-nav-footer__subtitle">Condiciones de uso y seguridad</Link>
           <h5 className="footer-nav-footer__subtitle">Copyright &copy; {currentYear} <Link to="https://www.linkedin.com/in/elliotgaramendi/" className="footer-nav-footer__subtitle-author" target="_blank" rel="noreferrer">{author}</Link></h5>
-          <Link to="/" className="footer-nav-footer__subtitle footer-nav-footer__subtitle--icon"><span className="footer-nav-footer__subtitle-icon"><i class="bi bi-book"></i></span> Libro de Reclamaciones</Link>
+          <Link to="/" className="footer-nav-footer__subtitle footer-nav-footer__subtitle--icon"><span className="footer-nav-footer__subtitle-icon"><i className="bi bi-book"></i></span> Libro de Reclamaciones</Link>
         </div>
       </nav>
     </footer>

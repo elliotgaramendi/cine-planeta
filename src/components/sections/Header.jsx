@@ -84,7 +84,7 @@ const Header = ({ applicationName }) => {
             className="header-nav__menu-icon"
             onClick={openMenu}
           >
-            <i class="bi bi-list"></i>
+            <i className="bi bi-list"></i>
           </button>
           <Link
             to="/"
@@ -147,7 +147,7 @@ const Header = ({ applicationName }) => {
                 className="header-nav__menu-link-item header-nav__menu-close-icon"
                 onClick={closeMenu}
               >
-                <i class="bi bi-x-circle"></i>
+                <i className="bi bi-x-circle"></i>
               </li>
             </ul>
           </div>
@@ -157,15 +157,15 @@ const Header = ({ applicationName }) => {
               className="header-nav__person-container"
             >
               <span className="header-nav__person-message">Únete</span>
-              <i class="bi bi-person-circle"></i>
+              <i className="bi bi-person-circle"></i>
             </Link>
             <button
               className="header-nav__theme-icon-container"
               ref={headerNavThemeIconContainer}
               onClick={toggleTheme}
             >
-              <span className="header-nav__theme-icon"><i class="bi bi-moon"></i></span>
-              <span className="header-nav__theme-icon"><i class="bi bi-sun"></i></span>
+              <span className="header-nav__theme-icon"><i className="bi bi-moon"></i></span>
+              <span className="header-nav__theme-icon"><i className="bi bi-sun"></i></span>
             </button>
           </div>
         </div>
