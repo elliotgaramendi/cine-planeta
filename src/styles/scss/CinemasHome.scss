@@ -89,6 +89,12 @@
   background-color: var(--secondary-theme-color);
   padding: var(--padding-section);
   transition: var(--secondary-all-transitions);
+  
+  @include desktop() {
+    @include d-flex-fd-ai-jc-g(row, center, center);
+    min-height: 716px;
+    box-sizing: border-box
+  }
 
   &__container {
     @include d-flex-fd-ai-jc-g(column, stretch, stretch, 1.5rem);
@@ -107,7 +113,8 @@
 
   &__cards-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, min(100%, 172px));
+    justify-content: center;
     gap: 0.75rem;
 
     @include desktop() {
@@ -128,7 +135,7 @@
     position: relative;
     background-color: var(--primary-shadow-color);
     width: 100%;
-    height: 100%;
+    height: 256px;
     overflow: hidden;
     transition: var(--primary-all-transitions);
 
@@ -172,6 +179,8 @@
     }
 
     @include desktop() {
+      height: auto;
+
       &:nth-child(1) {
         grid-area: card-1;
       }
