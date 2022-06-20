@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const CinemasPartner = () => {
-
   return (
     <section className="home-partner">
       <div className="home-partner__container">

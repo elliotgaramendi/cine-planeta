@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 const CinemasSlide = ({ premiere }) => {
   const { description, image } = premiere;
+  
   return (
     <div className="slick-slider__slide-container">
       <img src={image} alt={description} className="slick-slider__slide-image" />
