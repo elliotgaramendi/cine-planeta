@@ -182,6 +182,11 @@
     }
   }
 
+  &__mobile-image-link {
+    display: flex;
+    text-decoration: none;
+  }
+
   &__mobile-image {
     height: 3rem;
 
@@ -254,7 +259,7 @@
 
     &--icon {
       @include d-flex-fd-ai-jc-g(row, center, center, 0.25rem);
-      
+
       @include desktop() {
         gap: 0.5rem;
       }

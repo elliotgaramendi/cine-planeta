@@ -82,8 +82,8 @@ const Footer = ({ credits }) => {
             <div className="footer-nav__mobile">
               <p className="footer-nav__mobile-message">El universo Cineverse también está al alcance de tus dedos.</p>
               <div className="footer-nav__mobile-image-container">
-                <img src="https://es.logodownload.org/wp-content/uploads/2019/06/disponible-en-google-play-badge-1.png" alt="Disponible en Google Play" className="footer-nav__mobile-image" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Download_on_the_App_Store_Badge_ESMX_RGB_blk.svg/1280px-Download_on_the_App_Store_Badge_ESMX_RGB_blk.svg.png" alt="Descárgalo en el App Store" className="footer-nav__mobile-image" />
+                <Link to="/" className="footer-nav__mobile-image-link"><img src="https://es.logodownload.org/wp-content/uploads/2019/06/disponible-en-google-play-badge-1.png" alt="Disponible en Google Play" className="footer-nav__mobile-image" /></Link>
+                <Link to="/" className="footer-nav__mobile-image-link"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Download_on_the_App_Store_Badge_ESMX_RGB_blk.svg/1280px-Download_on_the_App_Store_Badge_ESMX_RGB_blk.svg.png" alt="Descárgalo en el App Store" className="footer-nav__mobile-image" /></Link>
               </div>
             </div>
             <div className="footer-nav__info">
