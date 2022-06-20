@@ -216,11 +216,13 @@
   }
 
   &__card-buy {
+    text-align: center;
     @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.25em 1em, var(--secondary-active-button-color));
     text-decoration: none;
   }
 
   &__card-description {
+    text-align: center;
     @include button(var(--primary-button-color), #0050b280, var(--primary-border-radius), 0.75rem, 400, 0.25em 1em, var(--primary-active-button-color));
   }
 }
