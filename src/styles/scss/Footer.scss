@@ -1,0 +1,122 @@
+@import './mixins';
+
+.footer {
+  box-shadow: 0 0 0.75rem 0 var(--primary-shadow-color);
+}
+
+.footer-nav {
+  background-color: var(--tertiary-text-color);
+  padding: var(--padding-section);
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    @include container;
+  }
+
+  &__link-list {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 1rem);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link-item {
+    display: flex;
+  }
+
+  &__link {
+    color: var(--inverse-primary-text-color);
+    font-weight: 700;
+    font-size: 0.75rem;
+    transition: var(--primary-all-transitions);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--inverse-secondary-text-color);
+      transform: scale(1.05);
+    }
+  }
+
+  &__contact-container {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 1.5rem);
+  }
+
+  &__contact-message {
+    color: var(--inverse-secondary-text-color);
+    font-size: 0.75rem;
+    margin: 0;
+  }
+
+  &__contact-social-networks {
+    @include d-flex-fd-ai-jc-g(row, stretch, stretch, 1rem);
+    flex-wrap: wrap;
+  }
+
+  &__contact-social-network {
+    width: 2.5rem;
+    height: 2.5rem;
+    @include d-flex-fd-ai-jc-g(row, center, center, 0);
+    color: var(--inverse-primary-text-color);
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    transition: var(--primary-all-transitions);
+
+    &:hover {
+      color: var(--inverse-secondary-text-color);
+      transform: scale(1.125);
+    }
+
+    @include desktop() {
+      width: 3rem;
+      height: 3rem;
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+  }
+
+  &__contact-link {
+    @include d-flex-fd-ai-jc-g(row, center, stretch, 0.5rem);
+    box-shadow: 0 0 0.5rem 0 var(--primary-shadow-color);
+    border: 0.0625rem solid var(--inverse-primary-text-color);
+    border-radius: var(--secondary-border-radius);
+    color: var(--inverse-primary-text-color);
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: var(--primary-all-transitions);
+
+    &:hover {
+      color: var(--inverse-secondary-text-color);
+      transform: scale(1.05);
+      box-shadow: 0 0 0.5rem 0 var(--inverse-tertiary-text-color);
+    }
+  }
+
+  &__contact-link-paragraph {
+    font-size: 0.75rem;
+    margin: 0;
+  }
+
+  &__credits {
+    position: relative;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  &__credits::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--primary-shadow-color);
+  }
+
+  &__credits-author {
+    color: var(--primary-highlight-color);
+    text-decoration: none;
+  }
+}

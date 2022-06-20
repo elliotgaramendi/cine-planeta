@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../components/sections/Footer";
 import Header from "../components/sections/Header";
 
 const CinemasLayout = () => {
@@ -16,9 +17,9 @@ const CinemasLayout = () => {
       <main className="main">
         <Outlet />
       </main>
-      <footer className="footer">
-        🦄Copyright &copy; {credits.year} <a href="https://www.linkedin.com/in/elliotgaramendi/" target="_blank" rel="noopener noreferrer">{credits.author}.</a> Todos los derechos reservados.🦄
-      </footer>
+      <Footer
+        credits={credits}
+      />
     </>
   );
 };
