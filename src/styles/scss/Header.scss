@@ -83,15 +83,9 @@
   &__menu-icon {
     background-color: transparent;
     border: 0;
-    color: var(--tertiary-text-color);
-    width: 1.5rem;
-    height: 1.5rem;
-    @include d-flex-fd-ai-jc-g(row, center, center, 0);
-    font-size: 1.375rem;
-    line-height: 1.375rem;
+    @include icon(var(--tertiary-text-color), 1.5rem);
     padding: 0;
     cursor: pointer;
-    transition: var(--secondary-all-transitions);
 
     @include desktop() {
       display: none;
@@ -202,14 +196,8 @@
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    @include d-flex-fd-ai-jc-g(row, center, center, 0);
-    color: var(--secondary-text-color);
-    font-size: 1.375rem;
-    line-height: 1.375rem;
+    @include icon(var(--secondary-text-color), 1.5rem);
     cursor: pointer;
-    transition: var(--secondary-all-transitions);
 
     @include desktop() {
       display: none;
@@ -226,20 +214,7 @@
 
   &__person-container {
     position: relative;
-    width: 1.5rem;
-    height: 1.5rem;
-    @include d-flex-fd-ai-jc-g(row, center, center, 0);
-    color: var(--tertiary-text-color);
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    transition: var(--secondary-all-transitions);
-
-    @include desktop() {
-      width: 1.75rem;
-      height: 1.75rem;
-      font-size: 1.75rem;
-      line-height: 1.75rem;
-    }
+    @include icon(var(--tertiary-text-color), 1.5rem);
   }
 
   &__person-message {
@@ -299,20 +274,6 @@
   }
 
   &__theme-icon {
-    position: relative;
-    width: 0.75rem;
-    height: 0.75rem;
-    @include d-flex-fd-ai-jc-g(row, center, center, 0);
-    color: var(--primary-button-text-color);
-    font-size: 0.75rem;
-    line-height: 0.75rem;
-    transition: var(--secondary-all-transitions);
-
-    @include desktop() {
-      width: 1rem;
-      height: 1rem;
-      font-size: 1rem;
-      line-height: 1rem;
-    }
+    @include icon(var(--primary-button-text-color));
   }
 }

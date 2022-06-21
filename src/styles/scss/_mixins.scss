@@ -62,6 +62,23 @@
   }
 }
 
+@mixin icon($color: var(--primary-text-color), $size: 0.75rem) {
+  @include d-flex-fd-ai-jc-g(row, center, center);
+  color: $color;
+  font-size: $size;
+  line-height: $size;
+  width: $size;
+  height: $size;
+  transition: var(--primary-all-transitions);
+
+  @include desktop() {
+    width: $size + 0.25rem;
+    height: $size + 0.25rem;
+    font-size: $size + 0.25rem;
+    line-height: $size + 0.25rem;
+  }
+}
+
 @mixin input {
   background: transparent;
   border: none;

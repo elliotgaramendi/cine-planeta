@@ -64,24 +64,11 @@
   }
 
   &__contact-social-network {
-    @include d-flex-fd-ai-jc-g(row, center, center, 0);
-    color: var(--inverse-primary-text-color);
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    transition: var(--primary-all-transitions);
+    @include icon(var(--inverse-primary-text-color), 2.5rem);
 
     &:hover {
       color: var(--inverse-secondary-text-color);
       transform: scale(1.125);
-    }
-
-    @include desktop() {
-      width: 2.75rem;
-      height: 2.75rem;
-      font-size: 2.75rem;
-      line-height: 2.75rem;
     }
   }
 
@@ -90,7 +77,6 @@
     box-shadow: 0 0 0.5rem 0 var(--primary-shadow-color);
     border: 0.0625rem solid var(--inverse-primary-text-color);
     border-radius: var(--secondary-border-radius);
-    color: var(--inverse-primary-text-color);
     padding: 0.75rem;
     text-decoration: none;
     transition: var(--primary-all-transitions);
@@ -108,20 +94,7 @@
   }
 
   &__contact-link-envelope {
-    @include d-flex-fd-ai-jc-g(row, center, center, 0);
-    color: var(--inverse-primary-text-color);
-    font-size: 2rem;
-    line-height: 2rem;
-    width: 2rem;
-    height: 2rem;
-    transition: var(--primary-all-transitions);
-
-    @include desktop() {
-      width: 2.25rem;
-      height: 2.25rem;
-      font-size: 2.25rem;
-      line-height: 2.25rem;
-    }
+    @include icon(var(--inverse-primary-text-color), 2rem);
   }
 
   &__contact-link-message {

@@ -94,20 +94,6 @@
   }
 
   &__theme-icon {
-    position: relative;
-    width: 0.75rem;
-    height: 0.75rem;
-    @include d-flex-fd-ai-jc-g(row, center, center, 0);
-    color: var(--primary-button-text-color);
-    font-size: 0.75rem;
-    line-height: 0.75rem;
-    transition: var(--secondary-all-transitions);
-
-    @include desktop() {
-      width: 1rem;
-      height: 1rem;
-      font-size: 1rem;
-      line-height: 1rem;
-    }
+    @include icon(var(--primary-button-text-color));
   }
 }
