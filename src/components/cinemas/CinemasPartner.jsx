@@ -4,7 +4,7 @@ const CinemasPartner = () => {
   return (
     <section className="home-partner">
       <div className="home-partner__container">
-        <div className="home-partner__card">
+        <div className="home-partner__card-container">
           <h3 className="home-partner__card-title">Bienvenido Socio Cineverse</h3>
           <img src="https://cdn.pixabay.com/photo/2018/08/31/02/28/credit-3643710_960_720.png" alt="membership card" className="home-partner__card-image" />
           <p className="home-partner__card-message">¿Estás preparado para vivir la mejor experiencia y gozar por los mejores beneficios? Socio Cineverse es lo que tanto deseabas.</p>

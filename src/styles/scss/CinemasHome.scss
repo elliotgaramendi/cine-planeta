@@ -243,7 +243,7 @@
     }
   }
 
-  &__card {
+  &__card-container {
     @include d-flex-fd-ai-jc-g(column, center, stretch, 1rem);
     background-color: var(--secondary-theme-color);
     box-shadow: 0.75rem 0.75rem 0 0 var(--primary-text-color);
