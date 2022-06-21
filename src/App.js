@@ -3,13 +3,13 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import {
   Routes,
-  Route,
-  Link,
+  Route
 } from 'react-router-dom';
 import CinemasLayout from './layouts/CinemasLayout';
 import CinemasHome from './pages/cinemas/CinemasHome';
 import AuthenticationLayout from './layouts/AuthenticationLayout';
 import AuthenticationRegister from './pages/authentication/AuthenticationRegister';
+import AuthenticationLogin from './pages/authentication/AuthenticationLogin';
 
 function App() {
   return (
@@ -22,12 +22,7 @@ function App() {
         </Route>
         <Route path='/autenticacion' element={<AuthenticationLayout />} >
           <Route path='registro' element={<AuthenticationRegister />} />
-          <Route path='login' element={
-            <>
-              <h1>Login</h1>
-              <Link to='/autenticacion/registro' style={{ color: '#0050b2' }}>Únete</Link>
-            </>
-          } />
+          <Route path='login' element={<AuthenticationLogin />} />
         </Route>
       </Routes>
     </Provider>

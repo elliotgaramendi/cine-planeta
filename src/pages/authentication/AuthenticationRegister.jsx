@@ -27,12 +27,12 @@ const AuthenticationRegister = () => {
               className="authentication-register__card-register-input"
               required
             />
-            <button className="authentication-register__card-register-button bg-blue-800 hover:bg-blue-900 py-2 rounded text-white font-bold">
+            <button className="authentication-register__card-register-button">
               <i class="bi bi-person-circle"></i> Unirme
             </button>
           </form>
         </div>
-        <div className="authentication-register__card-partner flex items-center justify-between">
+        <div className="authentication-register__card-partner">
           <div className="authentication-register__card-partner-header">
             <h3 className="authentication-register__card-partner-title">¿Ya eres socio?</h3>
             <p className="authentication-register__card-partner-message">Iniciando sesión en nuestro programa Socio Cineverse podrás acumular puntos en cada visita que realices y gozar de grandes beneficios.</p>

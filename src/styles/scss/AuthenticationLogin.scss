@@ -1,0 +1,117 @@
+@import './mixins';
+
+.authentication-login {
+  padding: var(--padding-section);
+
+  &__container {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 1rem);
+    @include container;
+  }
+
+  &__card-login {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 2rem);
+    box-shadow: 0 0 0.75rem 0.0625rem var(--secondary-shadow-color);
+    max-width: 256px;
+    margin: 0 auto;
+    padding: 2rem;
+    transition: var(--primary-all-transitions);
+
+    @include desktop() {
+      box-shadow: 0 0 1rem 0.125rem var(--secondary-shadow-color);
+      max-width: 512px;
+      box-sizing: border-box;
+      padding: 3rem;
+    }
+  }
+
+  &__card-login-header {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 0.5rem);
+    text-align: center;
+  }
+
+  &__card-login-title {
+    @include text(var(--primary-text-color), 800, 2rem, var(--secondary-font-family));
+
+    @include desktop() {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__card-login-message {
+    @include text(var(--tertiary-text-color));
+  }
+
+  &__card-login-form {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 1rem);
+
+    @include desktop() {
+      @include d-grid-gtc-g(1fr 1fr, 2rem);
+    }
+  }
+
+  &__card-login-input {
+    @include input;
+  }
+
+  &__card-login-button {
+    @include button(var(--primary-button-color), #0050b280, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--primary-active-button-color));
+    align-self: center;
+
+    @include desktop() {
+      font-size: 1rem;
+      justify-self: center;
+      grid-column: span 2;
+    }
+  }
+
+  &__card-partner {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 2rem);
+    max-width: 256px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    @include desktop() {
+      max-width: 512px;
+      box-sizing: border-box;
+      padding: 3rem;
+    }
+  }
+
+  &__card-partner-header {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 0.5rem);
+    text-align: center;
+  }
+
+  &__card-partner-title {
+    @include text(var(--secondary-text-color), 600, 1rem, var(--secondary-font-family));
+
+    @include desktop() {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__card-partner-message {
+    @include text(var(--secondary-text-color));
+  }
+
+  &__card-partner-button-container {
+    @include d-flex-fd-ai-jc-g(row, stretch, center, 0.75rem);
+
+    @include desktop() {
+      gap: 2rem;
+    }
+  }
+
+  &__card-partner-button {
+    @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--secondary-active-button-color));
+    align-self: center;
+
+    @include desktop() {
+      font-size: 1rem;
+    }
+  }
+
+  &__card-partner-guest {
+    @include button(var(--primary-button-color), #0050b280, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--primary-active-button-color));
+  }
+}
