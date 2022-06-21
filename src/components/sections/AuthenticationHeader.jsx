@@ -33,7 +33,7 @@ const AuthenticationHeader = ({ applicationName }) => {
             className="authentication-header-nav__back-button"
             onClick={() => navigate(-1)}
           >
-            <span className="authentication-header-nav__back-button-icon"><i class="bi bi-arrow-left-short"></i></span>
+            <span className="authentication-header-nav__back-button-icon"><i class="bi bi-chevron-left"></i></span>
             Atrás
           </button>
           <Link to="/" className="authentication-header-nav__home-logo">{applicationName}</Link>

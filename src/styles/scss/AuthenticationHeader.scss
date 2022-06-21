@@ -26,19 +26,7 @@
   }
 
   &__back-button-icon {
-    @include d-flex-fd-ai-jc-g(row, center, center, 0);
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    transition: var(--primary-all-transitions);
-
-    @include desktop() {
-      width: 1.625rem;
-      height: 1.625rem;
-      font-size: 1.625rem;
-      line-height: 1.625rem;
-    }
+    @include icon(var(--primary-text-color), 1rem);
   }
 
   &__home-logo {
