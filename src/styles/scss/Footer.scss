@@ -37,19 +37,12 @@
   }
 
   &__link {
-    color: var(--inverse-primary-text-color);
-    font-weight: 700;
-    font-size: 0.75rem;
-    transition: var(--primary-all-transitions);
+    @include text(var(--inverse-primary-text-color), 700, 0.75rem);
     text-decoration: none;
 
     &:hover {
       color: var(--inverse-secondary-text-color);
       transform: scale(1.05);
-    }
-
-    @include desktop() {
-      font-size: 1rem;
     }
   }
 
@@ -62,14 +55,7 @@
   }
 
   &__contact-message {
-    color: var(--inverse-secondary-text-color);
-    font-size: 0.75rem;
-    margin: 0;
-    transition: var(--primary-all-transitions);
-
-    @include desktop() {
-      font-size: 1rem;
-    }
+    @include text(var(--inverse-secondary-text-color));
   }
 
   &__contact-social-networks {
@@ -138,13 +124,8 @@
     }
   }
 
-  &__contact-link-paragraph {
-    font-size: 0.75rem;
-    margin: 0;
-
-    @include desktop() {
-      font-size: 1rem;
-    }
+  &__contact-link-message {
+    @include text(var(--inverse-primary-text-color));
   }
 
   &__mobile-info {
@@ -166,14 +147,7 @@
   }
 
   &__mobile-message {
-    color: var(--inverse-secondary-text-color);
-    font-size: 0.75rem;
-    margin: 0;
-    transition: var(--primary-all-transitions);
-
-    @include desktop() {
-      font-size: 1rem;
-    }
+    @include text(var(--inverse-primary-text-color));
   }
 
   &__mobile-image-container {
@@ -209,26 +183,11 @@
   }
 
   &__info-subtitle {
-    color: var(--inverse-secondary-text-color);
-    font-weight: 700;
-    font-size: 0.75rem;
-    margin: 0;
-    transition: var(--primary-all-transitions);
-
-    @include desktop() {
-      font-size: 1rem;
-    }
+    @include text(var(--inverse-secondary-text-color), 700);
   }
 
   &__info-message {
-    color: var(--inverse-secondary-text-color);
-    font-size: 0.75rem;
-    margin: 0;
-    transition: var(--primary-all-transitions);
-
-    @include desktop() {
-      font-size: 1rem;
-    }
+    @include text(var(--inverse-secondary-text-color));
   }
 
   &__info-message-link {
@@ -254,13 +213,9 @@
   }
 
   &__subtitle {
-    color: var(--primary-text-color);
+    @include text(var(--primary-text-color), 700, 0.625rem);
     text-align: center;
-    font-weight: 700;
-    font-size: 0.625rem;
-    margin: 0;
     text-decoration: none;
-    transition: var(--primary-all-transitions);
 
     @include desktop() {
       font-size: 0.875rem;

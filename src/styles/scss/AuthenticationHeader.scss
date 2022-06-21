@@ -20,16 +20,9 @@
     @include d-flex-fd-ai-jc-g(row, center, stretch, 0.25rem);
     background-color: transparent;
     border: none;
-    color: var(--primary-text-color);
-    font-size: 0.875rem;
-    font-family: 'Lato', sans-serif;
+    @include text(var(--primary-text-color), 400, 0.875rem);
     padding: 0;
     cursor: pointer;
-    transition: var(--primary-all-transitions);
-
-    @include desktop() {
-      font-size: 1rem;
-    }
   }
 
   &__back-button-icon {
@@ -49,10 +42,8 @@
   }
 
   &__home-logo {
-    color: var(--tertiary-text-color);
-    font-size: 1.25rem;
+    @include text(var(--tertiary-text-color), 900, 1.25rem);
     line-height: 1.5rem;
-    font-weight: 900;
     text-decoration: none;
 
     @include desktop() {

@@ -34,11 +34,7 @@
   &__content-title {
     position: relative;
     z-index: 5;
-    color: var(--primary-button-text-color);
-    font-weight: 800;
-    font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    @include text(var(--primary-button-text-color), 800, 2rem, var(--secondary-font-family));
 
     @include desktop() {
       font-size: 4rem;
@@ -223,10 +219,12 @@
   }
 
   &__card-buy {
+    text-align: center;
     @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.25em 1em, var(--secondary-active-button-color));
   }
 
   &__card-description {
+    text-align: center;
     @include button(var(--primary-button-color), #0050b280, var(--primary-border-radius), 0.75rem, 400, 0.25em 1em, var(--primary-active-button-color));
   }
 }
@@ -270,13 +268,8 @@
   }
 
   &__card-title {
-    color: var(--primary-text-color);
+    @include text(var(--primary-text-color), 700, 1.5rem, var(--secondary-font-family));
     text-align: center;
-    font-weight: 700;
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    transition: var(--primary-all-transitions);
 
     @include desktop() {
       text-align: start;
@@ -300,15 +293,11 @@
   }
 
   &__card-message {
-    color: var(--tertiary-text-color);
     text-align: center;
-    font-size: 0.875rem;
-    margin: 0;
-    transition: var(--primary-all-transitions);
+    @include text(var(--tertiary-text-color), 400, 0.875rem);
 
     @include desktop() {
       text-align: start;
-      font-size: 1rem;
       line-height: 1.5rem;
     }
   }

@@ -30,12 +30,7 @@
   }
 
   &__card-register-title {
-    color: var(--primary-text-color);
-    font-weight: 800;
-    font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    transition: var(--primary-all-transitions);
+    @include text(var(--primary-text-color), 800, 2rem, var(--secondary-font-family));
 
     @include desktop() {
       font-size: 2.5rem;
@@ -43,14 +38,7 @@
   }
 
   &__card-register-message {
-    color: var(--tertiary-text-color);
-    font-size: 0.75rem;
-    margin: 0;
-    transition: var(--primary-all-transitions);
-
-    @include desktop() {
-      font-size: 1rem;
-    }
+    @include text(var(--tertiary-text-color));
   }
 
   &__card-register-form {
@@ -65,12 +53,9 @@
     background: transparent;
     border: none;
     border-bottom: 0.0625px solid var(--quinary-text-color);
-    font-weight: 300;
-    font-size: 1rem;
-    font-family: 'Lato', sans-serif;
+    @include text(var(--tertiary-text-color), 300, 1rem);
     padding: 0.25em 0.5em;
     box-sizing: border-box;
-    transition: var(--primary-all-transitions);
 
     &:invalid {
       border-color: var(--secondary-highlight-color);
@@ -116,12 +101,7 @@
   }
 
   &__card-partner-title {
-    color: var(--secondary-text-color);
-    font-weight: 600;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    transition: var(--primary-all-transitions);
+    @include text(var(--secondary-text-color), 600, 1rem, var(--secondary-font-family));
 
     @include desktop() {
       font-size: 1.125rem;
@@ -129,14 +109,7 @@
   }
 
   &__card-partner-message {
-    color: var(--secondary-text-color);
-    font-size: 0.75rem;
-    margin: 0;
-    transition: var(--primary-all-transitions);
-
-    @include desktop() {
-      font-size: 1rem;
-    }
+    @include text(var(--secondary-text-color));
   }
 
   &__card-partner-button {

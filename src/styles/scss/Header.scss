@@ -99,10 +99,8 @@
   }
 
   &__link-logo-container {
-    color: var(--tertiary-text-color);
-    font-size: 1.25rem;
+    @include text(var(--tertiary-text-color), 900, 1.25rem);
     line-height: 1.5rem;
-    font-weight: 900;
     text-decoration: none;
 
     @include desktop() {
@@ -168,10 +166,8 @@
 
   &__menu-link {
     position: relative;
-    color: var(--quaternary-text-color);
-    font-weight: 700;
+    @include text(var(--quaternary-text-color), 700, 1rem);
     text-decoration: none;
-    transition: var(--primary-all-transitions);
 
     &--active {
       color: var(--primary-text-color);

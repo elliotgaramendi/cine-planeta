@@ -49,6 +49,19 @@
   }
 }
 
+@mixin text($color: var(--primary-text-color), $font-weight: 400, $font-size: 0.75rem, $font-family: var(--primary-font-family)) {
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  font-family: $font-family;
+  margin: 0;
+  transition: var(--primary-all-transitions);
+
+  @include desktop() {
+    font-size: 1rem;
+  }
+}
+
 @mixin desktop() {
   @media (min-width: 854px) {
     @content;

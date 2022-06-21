@@ -75,7 +75,7 @@ const Footer = ({ credits }) => {
             </div>
             <Link to="/" className="footer-nav__contact-link">
               <span className="footer-nav__contact-link-envelope"><i className="bi bi-envelope"></i></span>
-              <p className="footer-nav__contact-link-paragraph">Atención de consultas o incidencias por contáctanos.</p>
+              <p className="footer-nav__contact-link-message">Atención de consultas o incidencias por contáctanos.</p>
             </Link>
           </div>
           <div className="footer-nav__mobile-info">
