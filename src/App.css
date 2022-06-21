@@ -3,3 +3,7 @@
   flex-direction: column;
   width: 100%;
 }
+
+.main--authentication {
+  margin: auto;
+}

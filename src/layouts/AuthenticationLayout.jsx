@@ -10,10 +10,10 @@ const AuthenticationLayout = () => {
       <AuthenticationHeader
         applicationName={applicationName}
       />
-      <main>
+      <main className="main main--authentication">
         <Outlet />
       </main>
-      <footer>
+      <footer style={{ textAlign: 'center', padding: '1.5rem' }}>
         Copyright &copy; {year} {author}
       </footer>
     </>

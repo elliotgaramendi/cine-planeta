@@ -12,24 +12,6 @@
   border-bottom: 0.0625rem solid var(--inverse-tertiary-text-color);
   transition: var(--secondary-all-transitions);
 
-  @include desktop() {
-    left: 0;
-
-    &--home {
-      .header-nav__menu-link {
-        color: var(--inverse-tertiary-text-color);
-
-        &--active {
-          color: var(--inverse-secondary-text-color);
-        }
-
-        &:hover {
-          color: var(--inverse-primary-text-color);
-        }
-      }
-    }
-  }
-
   &--open {
     left: 80%;
   }
@@ -64,6 +46,24 @@
 
     & .header-nav__person-container {
       color: var(--inverse-secondary-text-color);
+    }
+  }
+
+  @include desktop() {
+    left: 0;
+
+    &--home {
+      .header-nav__menu-link {
+        color: var(--inverse-tertiary-text-color);
+
+        &--active {
+          color: var(--inverse-secondary-text-color);
+        }
+
+        &:hover {
+          color: var(--inverse-primary-text-color);
+        }
+      }
     }
   }
 }

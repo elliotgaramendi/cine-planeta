@@ -12,7 +12,7 @@ const CinemasPartner = () => {
             <Link to={`/autenticacion/login`} className="home-partner__card-login-button home-partner__card-login-button--outline">
               Inicia
             </Link>
-            <Link to={`/autenticacion/login`} className="home-partner__card-register-button">
+            <Link to={`/autenticacion/registro`} className="home-partner__card-register-button">
               Únete
             </Link>
           </div>

@@ -1,0 +1,152 @@
+@import './mixins';
+
+.authentication-register {
+  padding: var(--padding-section);
+
+  &__container {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 1rem);
+    @include container;
+  }
+
+  &__card-register {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 2rem);
+    box-shadow: 0 0 0.75rem 0.0625rem var(--secondary-shadow-color);
+    max-width: 256px;
+    margin: 0 auto;
+    padding: 2rem;
+    transition: var(--primary-all-transitions);
+
+    @include desktop() {
+      box-shadow: 0 0 1rem 0.125rem var(--secondary-shadow-color);
+      max-width: 512px;
+      box-sizing: border-box;
+      padding: 3rem;
+    }
+  }
+
+  &__card-register-header {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 0.5rem);
+    text-align: center;
+  }
+
+  &__card-register-title {
+    color: var(--primary-text-color);
+    font-weight: 800;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    transition: var(--primary-all-transitions);
+
+    @include desktop() {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__card-register-message {
+    color: var(--tertiary-text-color);
+    font-size: 0.75rem;
+    margin: 0;
+    transition: var(--primary-all-transitions);
+
+    @include desktop() {
+      font-size: 1rem;
+    }
+  }
+
+  &__card-register-form {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 1rem);
+
+    @include desktop() {
+      @include d-grid-gtc-g(1fr 1fr, 2rem);
+    }
+  }
+
+  &__card-register-input {
+    background: transparent;
+    border: none;
+    border-bottom: 0.0625px solid var(--quinary-text-color);
+    font-weight: 300;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    padding: 0.25em 0.5em;
+    box-sizing: border-box;
+    transition: var(--primary-all-transitions);
+
+    &:invalid {
+      border-color: var(--secondary-highlight-color);
+      color: var(--secondary-highlight-color);
+
+      &::placeholder {
+        color: var(--secondary-highlight-color);
+      }
+    }
+
+    @include desktop() {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__card-register-button {
+    @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--secondary-active-button-color));
+    align-self: center;
+    cursor: pointer;
+
+    @include desktop() {
+      font-size: 1rem;
+      justify-self: center;
+      grid-column: span 2;
+    }
+  }
+
+  &__card-partner {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 2rem);
+    max-width: 256px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    @include desktop() {
+      max-width: 512px;
+      box-sizing: border-box;
+      padding: 3rem;
+    }
+  }
+
+  &__card-partner-header {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 0.5rem);
+    text-align: center;
+  }
+
+  &__card-partner-title {
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    transition: var(--primary-all-transitions);
+
+    @include desktop() {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__card-partner-message {
+    color: var(--secondary-text-color);
+    font-size: 0.75rem;
+    margin: 0;
+    transition: var(--primary-all-transitions);
+
+    @include desktop() {
+      font-size: 1rem;
+    }
+  }
+
+  &__card-partner-button {
+    @include button(var(--primary-button-color), #0050b280, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--primary-active-button-color));
+    align-self: center;
+    text-decoration: none;
+
+    @include desktop() {
+      font-size: 1rem;
+    }
+  }
+}
