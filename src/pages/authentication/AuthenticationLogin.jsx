@@ -27,9 +27,17 @@ const AuthenticationLogin = () => {
               className="authentication-login__card-login-input"
               required
             />
-            <button className="authentication-login__card-login-button">
-              <i class="bi bi-person"></i> Ingresar
-            </button>
+            <div className="authentication-login__card-login-button-container">
+              <Link
+                to="/autenticacion/recuperar-contrasena"
+                className="authentication-login__card-login-recover"
+              >
+                ¿Olvidaste tu contraseña?
+              </Link>
+              <button className="authentication-login__card-login-button">
+                <i class="bi bi-person"></i> Ingresar
+              </button>
+            </div>
           </form>
         </div>
         <div className="authentication-login__card-partner">
@@ -37,10 +45,10 @@ const AuthenticationLogin = () => {
             <h3 className="authentication-login__card-partner-title">¿No eres socio?</h3>
             <p className="authentication-login__card-partner-message">Registrándote en nuestro programa Socio Cineverse podrás acumular puntos en cada visita que realices y gozar de grandes beneficios.</p>
           </div>
-          <div className="authentication-login__card-partner-button-container">
+          <div className="authentication-login__card-partner-link-container">
             <Link
               to="/autenticacion/registro"
-              className="authentication-login__card-partner-button"
+              className="authentication-login__card-partner-register"
             >
               <i class="bi bi-person-circle"></i> Únete
             </Link>

@@ -10,6 +10,7 @@ import CinemasHome from './pages/cinemas/CinemasHome';
 import AuthenticationLayout from './layouts/AuthenticationLayout';
 import AuthenticationRegister from './pages/authentication/AuthenticationRegister';
 import AuthenticationLogin from './pages/authentication/AuthenticationLogin';
+import AuthenticationRecoverPassword from './pages/authentication/AuthenticationRecoverPassword';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/autenticacion' element={<AuthenticationLayout />} >
           <Route path='registro' element={<AuthenticationRegister />} />
           <Route path='login' element={<AuthenticationLogin />} />
+          <Route path='recuperar-contrasena' element={<AuthenticationRecoverPassword />} />
         </Route>
       </Routes>
     </Provider>

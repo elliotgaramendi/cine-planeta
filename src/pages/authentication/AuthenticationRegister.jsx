@@ -39,7 +39,7 @@ const AuthenticationRegister = () => {
           </div>
           <Link
             to="/autenticacion/login"
-            className="authentication-register__card-partner-button"
+            className="authentication-register__card-partner-login"
           >
             <i class="bi bi-person"></i> Iniciar sesión
           </Link>
