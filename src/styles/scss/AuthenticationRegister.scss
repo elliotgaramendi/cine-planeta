@@ -50,25 +50,7 @@
   }
 
   &__card-register-input {
-    background: transparent;
-    border: none;
-    border-bottom: 0.0625px solid var(--quinary-text-color);
-    @include text(var(--tertiary-text-color), 300, 1rem);
-    padding: 0.25em 0.5em;
-    box-sizing: border-box;
-
-    &:invalid {
-      border-color: var(--secondary-highlight-color);
-      color: var(--secondary-highlight-color);
-
-      &::placeholder {
-        color: var(--secondary-highlight-color);
-      }
-    }
-
-    @include desktop() {
-      font-size: 1.125rem;
-    }
+    @include input;
   }
 
   &__card-register-button {

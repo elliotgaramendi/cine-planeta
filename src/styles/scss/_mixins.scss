@@ -18,6 +18,19 @@
   gap: $gap;
 }
 
+@mixin text($color: var(--primary-text-color), $font-weight: 400, $font-size: 0.75rem, $font-family: var(--primary-font-family)) {
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  font-family: $font-family;
+  margin: 0;
+  transition: var(--primary-all-transitions);
+
+  @include desktop() {
+    font-size: 1rem;
+  }
+}
+
 @mixin button($background-color: var(--primary-button-color), $box-shadow: #0050b280, $border-radius: var(--primary-border-radius), $font-size: 0.75rem, $font-weight: 400, $padding: 0.25em 1em, $active-button-color: var(--primary-active-button-color)) {
   background-color: $background-color;
   border: 0.0625rem solid $background-color;
@@ -49,16 +62,25 @@
   }
 }
 
-@mixin text($color: var(--primary-text-color), $font-weight: 400, $font-size: 0.75rem, $font-family: var(--primary-font-family)) {
-  color: $color;
-  font-weight: $font-weight;
-  font-size: $font-size;
-  font-family: $font-family;
-  margin: 0;
-  transition: var(--primary-all-transitions);
+@mixin input {
+  background: transparent;
+  border: none;
+  border-bottom: 0.0625px solid var(--quinary-text-color);
+  @include text(var(--tertiary-text-color), 300, 1rem);
+  padding: 0.25em 0.5em;
+  box-sizing: border-box;
+
+  &:invalid {
+    border-color: var(--secondary-highlight-color);
+    color: var(--secondary-highlight-color);
+
+    &::placeholder {
+      color: var(--secondary-highlight-color);
+    }
+  }
 
   @include desktop() {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
