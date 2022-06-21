@@ -23,17 +23,20 @@
   border: 0.0625rem solid $background-color;
   border-radius: $border-radius;
   color: var(--primary-button-text-color);
-  font-size: $font-size;
   font-weight: $font-weight;
+  font-size: $font-size;
+  font-family: 'Lato', sans-serif;
   padding: $padding;
-  transition: var(--primary-all-transitions);
   box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--primary-all-transitions);
 
   &--active,
   &:hover {
     background-color: $active-button-color;
-    box-shadow: 0 0 0.5rem 0.125rem $box-shadow;
     border: 0.0625rem solid $active-button-color;
+    box-shadow: 0 0 0.5rem 0.125rem $box-shadow;
   }
 
   &--outline {
