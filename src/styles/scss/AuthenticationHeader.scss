@@ -1,0 +1,122 @@
+@import './mixins';
+
+.authentication-header {
+  background-color: var(--primary-theme-color);
+  border-top: 0.25rem solid var(--primary-text-color);
+  border-bottom: 0.25rem solid var(--primary-text-color);
+  box-shadow: 0 0.25rem 0.75rem 0 var(--secondary-shadow-color);
+  transition: var(--primary-all-transitions);
+}
+
+.authentication-header-nav {
+  padding: 0.75rem 0;
+
+  &__container {
+    @include d-flex-fd-ai-jc-g(row, center, space-between, 0);
+    @include container;
+  }
+
+  &__back-button {
+    @include d-flex-fd-ai-jc-g(row, center, stretch, 0.25rem);
+    background-color: transparent;
+    border: none;
+    color: var(--primary-text-color);
+    font-size: 0.875rem;
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    cursor: pointer;
+    transition: var(--primary-all-transitions);
+
+    @include desktop() {
+      font-size: 1rem;
+    }
+  }
+
+  &__back-button-icon {
+    @include d-flex-fd-ai-jc-g(row, center, center, 0);
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: var(--primary-all-transitions);
+
+    @include desktop() {
+      width: 1.625rem;
+      height: 1.625rem;
+      font-size: 1.625rem;
+      line-height: 1.625rem;
+    }
+  }
+
+  &__home-logo {
+    color: var(--tertiary-text-color);
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 900;
+    text-decoration: none;
+
+    @include desktop() {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
+  &__theme-icon-container {
+    position: relative;
+    @include d-flex-fd-ai-jc-g(row, center, center, 0.25rem);
+    background-color: var(--primary-text-color);
+    border: 0;
+    border-radius: var(--primary-border-radius);
+    padding: 0.125rem 0.375rem;
+    cursor: pointer;
+    transition: var(--primary-all-transitions);
+
+    @include desktop() {
+      gap: 0.375rem;
+      padding: 0.25rem 0.5rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      background-color: var(--primary-theme-color);
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 0.125rem var(--primary-shadow-color),
+        0 0 0.25rem 0 var(--primary-shadow-color),
+        0 0 0.375rem 0 var(--primary-shadow-color),
+        0 0 0.5rem 0 var(--primary-shadow-color);
+      transition: var(--primary-all-transitions);
+
+      @include desktop() {
+        width: 1.625rem;
+        height: 1.625rem;
+      }
+    }
+
+    &--active::after {
+      left: 50%;
+    }
+  }
+
+  &__theme-icon {
+    position: relative;
+    width: 0.75rem;
+    height: 0.75rem;
+    @include d-flex-fd-ai-jc-g(row, center, center, 0);
+    color: var(--primary-button-text-color);
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    transition: var(--secondary-all-transitions);
+
+    @include desktop() {
+      width: 1rem;
+      height: 1rem;
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+  }
+}

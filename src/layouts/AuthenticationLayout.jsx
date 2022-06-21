@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import AuthenticationHeader from "../components/sections/AuthenticationHeader";
 import { applicationName, credits } from "../utils/generalInformation";
 
 const AuthenticationLayout = () => {
@@ -6,9 +7,9 @@ const AuthenticationLayout = () => {
 
   return (
     <>
-      <header>
-        {applicationName}
-      </header>
+      <AuthenticationHeader
+        applicationName={applicationName}
+      />
       <main>
         <Outlet />
       </main>
