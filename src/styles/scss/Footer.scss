@@ -139,6 +139,7 @@
   }
 
   &__mobile-image {
+    width: auto;
     height: 3rem;
 
     @include desktop() {
