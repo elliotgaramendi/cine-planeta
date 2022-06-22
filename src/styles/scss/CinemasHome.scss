@@ -99,7 +99,7 @@
     text-align: center;
     font-weight: 900;
     font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--secondary-font-family);
     margin: 0;
     transition: var(--secondary-all-transitions);
   }
