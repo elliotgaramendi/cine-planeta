@@ -1,5 +1,5 @@
 .slick-slider {
-  background-color: var(--primary-shadow-color);
+  height: 100vh;
 }
 
 .slick-slider::before {
