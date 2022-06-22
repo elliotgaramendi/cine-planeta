@@ -11,13 +11,23 @@ import AuthenticationLayout from './layouts/AuthenticationLayout';
 import AuthenticationRegister from './pages/authentication/AuthenticationRegister';
 import AuthenticationLogin from './pages/authentication/AuthenticationLogin';
 import AuthenticationRecoverPassword from './pages/authentication/AuthenticationRecoverPassword';
+import CinemasPartner from './components/cinemas/CinemasPartner';
 
 function App() {
   return (
     <Provider store={store}>
       <Routes>
         <Route path='/' element={<CinemasLayout />}>
-          <Route path='dulceria' element={<h1>Dulcería</h1>} />
+          <Route path='dulceria' element={
+            <>
+              <CinemasPartner />
+              <CinemasPartner />
+              <CinemasPartner />
+              <CinemasPartner />
+              <CinemasPartner />
+              <CinemasPartner />
+            </>
+          } />
           <Route index element={<CinemasHome />} />
           <Route path='*' element={<h1>404</h1>} />
         </Route>

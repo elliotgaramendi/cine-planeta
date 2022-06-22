@@ -28,7 +28,7 @@ const AuthenticationRegister = () => {
               required
             />
             <button className="authentication-register__card-register-button">
-              <i class="bi bi-person-circle"></i> Unirme
+              <i className="bi bi-person-circle"></i> Unirme
             </button>
           </form>
         </div>
@@ -41,7 +41,7 @@ const AuthenticationRegister = () => {
             to="/autenticacion/login"
             className="authentication-register__card-partner-login"
           >
-            <i class="bi bi-person"></i> Iniciar sesión
+            <i className="bi bi-person"></i> Iniciar sesión
           </Link>
         </div>
       </div>

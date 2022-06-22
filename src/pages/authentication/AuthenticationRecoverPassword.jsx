@@ -30,7 +30,7 @@ const AuthenticationRecoverPassword = () => {
               <button
                 className="authentication-recover__card-recover-button"
               >
-                Continuar <i class="bi bi-chevron-right"></i>
+                Continuar <i className="bi bi-chevron-right"></i>
               </button>
             </div>
           </form>
@@ -45,13 +45,13 @@ const AuthenticationRecoverPassword = () => {
               to="/autenticacion/login"
               className="authentication-recover__card-partner-login"
             >
-              <i class="bi bi-person"></i> Iniciar sesión
+              <i className="bi bi-person"></i> Iniciar sesión
             </Link>
             <Link
               to="/autenticacion/registro"
               className="authentication-recover__card-partner-register"
             >
-              <i class="bi bi-person-circle"></i> Únete
+              <i className="bi bi-person-circle"></i> Únete
             </Link>
           </div>
         </div>

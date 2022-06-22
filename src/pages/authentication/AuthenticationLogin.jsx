@@ -35,7 +35,7 @@ const AuthenticationLogin = () => {
                 ¿Olvidaste tu contraseña?
               </Link>
               <button className="authentication-login__card-login-button">
-                <i class="bi bi-person"></i> Ingresar
+                <i className="bi bi-person"></i> Ingresar
               </button>
             </div>
           </form>
@@ -50,7 +50,7 @@ const AuthenticationLogin = () => {
               to="/autenticacion/registro"
               className="authentication-login__card-partner-register"
             >
-              <i class="bi bi-person-circle"></i> Únete
+              <i className="bi bi-person-circle"></i> Únete
             </Link>
             <Link
               to="/dulceria"
