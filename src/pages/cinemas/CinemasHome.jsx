@@ -14,6 +14,7 @@ const CinemasHome = () => {
 
   useEffect(() => {
     document.title = '¡Bienvenido a Cineverse Perú!';
+    window.scrollTo(0, 0);
     dispatch(fetchReadPremieres());
     // eslint-disable-next-line
   }, []);

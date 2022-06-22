@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/scss/AuthenticationRegister.scss';
 
 const AuthenticationRegister = () => {
+  useEffect(() => {
+    document.title = 'Únete';
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="authentication-register">
       <div className="authentication-register__container">

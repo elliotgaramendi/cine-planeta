@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/scss/AuthenticationLogin.scss';
 
 const AuthenticationLogin = () => {
+  useEffect(() => {
+    document.title = 'Iniciar sesión';
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="authentication-login">
       <div className="authentication-login__container">

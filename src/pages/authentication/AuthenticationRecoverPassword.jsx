@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/scss/AuthenticationRecoverPassword.scss';
 
 const AuthenticationRecoverPassword = () => {
+  useEffect(() => {
+    document.title = '¿Olvidaste tu contraseña?';
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="authentication-recover">
       <div className="authentication-recover__container">
