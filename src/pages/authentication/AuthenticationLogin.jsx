@@ -4,7 +4,6 @@ import AuthenticationCard from '../../components/authentication/AuthenticationCa
 import AuthenticationCardHeader from '../../components/authentication/AuthenticationCardHeader';
 import AuthenticationLoginForm from '../../components/authentication/AuthenticationLoginForm';
 import AuthenticationSection from '../../components/authentication/AuthenticationSection';
-import '../../styles/scss/AuthenticationLogin.scss';
 
 const AuthenticationLogin = () => {
   useEffect(() => {
@@ -31,16 +30,16 @@ const AuthenticationLogin = () => {
           }}
           partner={true}
         />
-        <div className="authentication-login__card-partner-link-container">
+        <div className="authentication__button-container">
           <Link
             to="/autenticacion/registro"
-            className="authentication-login__card-partner-register"
+            className="authentication__button-secondary"
           >
             <i className="bi bi-person-circle"></i> Únete
           </Link>
           <Link
             to="/dulceria"
-            className="authentication-login__card-partner-guest authentication-login__card-partner-guest--outline"
+            className="authentication__button-primary authentication__button-primary--outline"
           >
             Seguir como invitado
           </Link>

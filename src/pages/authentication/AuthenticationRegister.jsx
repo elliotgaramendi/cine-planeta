@@ -30,7 +30,7 @@ const AuthenticationRegister = () => {
           }}
           partner={true}
         />
-        <div className="authentication__button-container authentication__button-container--col-span-2">
+        <div className="authentication__button-container">
           <Link
             to="/autenticacion/login"
             className="authentication__button-primary"
