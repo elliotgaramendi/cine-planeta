@@ -1,5 +1,5 @@
 export const applicationName = "🌌cineverse🌌";
 export const credits = {
-  author: 'ELGS',
+  author: 'Elliot Garamendi',
   year: new Date().getFullYear()
 };
