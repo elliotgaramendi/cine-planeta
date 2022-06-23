@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AuthenticationCard from '../../components/authentication/AuthenticationCard';
 import AuthenticationCardHeader from '../../components/authentication/AuthenticationCardHeader';
+import AuthenticationLoginForm from '../../components/authentication/AuthenticationLoginForm';
 import AuthenticationSection from '../../components/authentication/AuthenticationSection';
 import '../../styles/scss/AuthenticationLogin.scss';
 
@@ -20,35 +21,7 @@ const AuthenticationLogin = () => {
             message: 'Ingresa a tu cuenta para disfrutar de tus beneficios, acumular puntos y vivir al máximo la experiencia Cineverse.'
           }}
         />
-        <form
-          className="authentication-login__card-login-form"
-        >
-          <input
-            type="email"
-            placeholder="Email"
-            name="email"
-            className="authentication-login__card-login-input"
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            className="authentication-login__card-login-input"
-            required
-          />
-          <div className="authentication-login__card-login-button-container">
-            <Link
-              to="/autenticacion/recuperar-contrasena"
-              className="authentication-login__card-login-recover"
-            >
-              ¿Olvidaste tu contraseña?
-            </Link>
-            <button className="authentication-login__card-login-button">
-              <i className="bi bi-person"></i> Ingresar
-            </button>
-          </div>
-        </form>
+        <AuthenticationLoginForm />
       </AuthenticationCard>
       <AuthenticationCard className={'authentication__card--partner'}>
         <AuthenticationCardHeader

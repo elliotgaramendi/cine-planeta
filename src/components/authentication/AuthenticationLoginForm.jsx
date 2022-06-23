@@ -1,7 +1,8 @@
 import * as yup from 'yup';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { Link } from 'react-router-dom';
 
-const AuthenticationRegisterForm = () => {
+const AuthenticationLoginForm = () => {
   return (
     <Formik
       initialValues={{
@@ -22,7 +23,7 @@ const AuthenticationRegisterForm = () => {
         return (
           <Form
             onSubmit={handleSubmit}
-            className="authentication__form authentication__form--grid-cols-2-gap-8"
+            className="authentication__form"
           >
             <div className="authentication__form-input-container">
               <Field name="email" type="text" placeholder="Email" className="authentication__form-input" required />
@@ -32,13 +33,19 @@ const AuthenticationRegisterForm = () => {
               <Field name="password" type="password" placeholder="Password" className="authentication__form-input" required />
               <ErrorMessage name="password" component="div" className="authentication__form-error" />
             </div>
-            <div className="authentication__form-button-container authentication__form-button-container--col-span-2">
+            <div className="authentication__form-button-container authentication__form-button-container--flex-column">
+              <Link
+                to="/autenticacion/recuperar-contrasena"
+                className="authentication__form-recover-password"
+              >
+                ¿Olvidaste tu contraseña?
+              </Link>
               <button
                 type="submit"
-                className="authentication__form-button authentication__form-button--register"
+                className="authentication__form-button authentication__form-button--login"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? <i className="bi bi-arrow-repeat"></i> : <><i className="bi bi-person-circle"></i> Unirme</>}
+                {isSubmitting ? <i className="bi bi-arrow-repeat"></i> : <><i className="bi bi-person"></i> Ingresar</>}
               </button>
             </div>
           </Form>
@@ -48,4 +55,4 @@ const AuthenticationRegisterForm = () => {
   );
 };
 
-export default AuthenticationRegisterForm;
+export default AuthenticationLoginForm;

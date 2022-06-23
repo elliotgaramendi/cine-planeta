@@ -66,8 +66,10 @@
   &__form {
     @include d-flex-fd-ai-jc-g(column, stretch, stretch, 2rem);
 
-    @include desktop() {
-      @include d-grid-gtc-g(1fr 1fr, 2rem);
+    &--grid-cols-2-gap-8 {
+      @include desktop() {
+        @include d-grid-gtc-g(1fr 1fr, 2rem);
+      }
     }
   }
 
@@ -117,21 +119,38 @@
   &__form-button-container {
     @include d-flex-fd-ai-jc-g(row, stretch, center, 0.75rem);
 
-    &--register {
+    &--col-span-2 {
       grid-column: span 2;
+    }
+
+    &--flex-column {
+      flex-direction: column;
     }
   }
 
+  &__form-recover-password {
+    @include text(var(--tertiary-text-color));
+    text-align: center;
+    text-decoration: none;
+
+    @include desktop() {
+      font-size: 0.875rem;
+    }
+  }
 
   &__form-button {
     align-self: center;
 
-    @include desktop() {
-      font-size: 1rem;
-    }
-
     &--register {
       @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--secondary-active-button-color));
+    }
+
+    &--login {
+      @include button(var(--primary-button-color), #0050b280, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--primary-active-button-color));
+    }
+
+    @include desktop() {
+      font-size: 1rem;
     }
   }
 
