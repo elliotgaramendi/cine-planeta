@@ -33,7 +33,7 @@ const AuthenticationRegister = () => {
         />
         <Link
           to="/autenticacion/login"
-          className="authentication-register__card-partner-login"
+          className="authentication__button-primary"
         >
           <i className="bi bi-person"></i> Iniciar sesión
         </Link>

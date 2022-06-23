@@ -32,10 +32,10 @@ const AuthenticationRegisterForm = () => {
               <Field name="password" type="password" placeholder="Password" className="authentication__form-input" required />
               <ErrorMessage name="password" component="div" className="authentication__form-error" />
             </div>
-            <div className="authentication__form-button-container authentication__form-button-container--col-span-2">
+            <div className="authentication__button-container authentication__button-container--col-span-2">
               <button
                 type="submit"
-                className="authentication__form-button authentication__form-button--register"
+                className="authentication__button-secondary"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? <i className="bi bi-arrow-repeat"></i> : <><i className="bi bi-person-circle"></i> Unirme</>}

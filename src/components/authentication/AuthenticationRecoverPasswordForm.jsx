@@ -27,15 +27,15 @@ const AuthenticationRecoverPasswordForm = () => {
               <Field name="email" type="text" placeholder="Email" className="authentication__form-input" required />
               <ErrorMessage name="email" component="div" className="authentication__form-error" />
             </div>
-            <div className="authentication__form-button-container">
+            <div className="authentication__button-container">
               <Link
                 to="/autenticacion/login"
-                className="authentication__form-button-primary authentication__form-button-primary--outline"
+                className="authentication__button-primary authentication__button-primary--outline"
               >
                 Cancelar
               </Link>
               <button
-                className="authentication__form-button-primary"
+                className="authentication__button-primary"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? <i className="bi bi-arrow-repeat"></i> : <>Recuperar <i className="bi bi-chevron-right"></i></>}

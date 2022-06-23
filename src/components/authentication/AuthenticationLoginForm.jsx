@@ -33,7 +33,7 @@ const AuthenticationLoginForm = () => {
               <Field name="password" type="password" placeholder="Password" className="authentication__form-input" required />
               <ErrorMessage name="password" component="div" className="authentication__form-error" />
             </div>
-            <div className="authentication__form-button-container authentication__form-button-container--flex-column">
+            <div className="authentication__button-container authentication__button-container--flex-column">
               <Link
                 to="/autenticacion/recuperar-contrasena"
                 className="authentication__form-recover-password"
@@ -42,7 +42,7 @@ const AuthenticationLoginForm = () => {
               </Link>
               <button
                 type="submit"
-                className="authentication__form-button authentication__form-button--login"
+                className="authentication__button-primary"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? <i className="bi bi-arrow-repeat"></i> : <><i className="bi bi-person"></i> Ingresar</>}
