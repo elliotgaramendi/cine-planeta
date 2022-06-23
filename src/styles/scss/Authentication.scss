@@ -149,9 +149,17 @@
       @include button(var(--primary-button-color), #0050b280, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--primary-active-button-color));
     }
 
+
     @include desktop() {
       font-size: 1rem;
     }
   }
 
+  &__form-button-primary {
+    @include button(var(--primary-button-color), #0050b280, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--primary-active-button-color));
+
+    @include desktop() {
+      font-size: 1rem;
+    }
+  }
 }

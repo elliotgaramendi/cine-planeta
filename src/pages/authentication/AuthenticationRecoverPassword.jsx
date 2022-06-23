@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AuthenticationCard from '../../components/authentication/AuthenticationCard';
 import AuthenticationCardHeader from '../../components/authentication/AuthenticationCardHeader';
+import AuthenticationRecoverPasswordForm from '../../components/authentication/AuthenticationRecoverPasswordForm';
 import AuthenticationSection from '../../components/authentication/AuthenticationSection';
 import '../../styles/scss/AuthenticationRecoverPassword.scss';
 
@@ -20,30 +21,7 @@ const AuthenticationRecoverPassword = () => {
             message: 'Ingresa tu dirección de email registrada y te enviaremos un correo para que puedas crear una nueva contraseña.'
           }}
         />
-        <form
-          className="authentication-recover__card-recover-form"
-        >
-          <input
-            type="email"
-            placeholder="Email"
-            name="email"
-            className="authentication-recover__card-recover-input"
-            required
-          />
-          <div className="authentication-recover__card-recover-button-container">
-            <Link
-              to="/autenticacion/login"
-              className="authentication-recover__card-recover-login authentication-recover__card-recover-login--outline"
-            >
-              Cancelar
-            </Link>
-            <button
-              className="authentication-recover__card-recover-button"
-            >
-              Continuar <i className="bi bi-chevron-right"></i>
-            </button>
-          </div>
-        </form>
+        <AuthenticationRecoverPasswordForm />
       </AuthenticationCard>
       <AuthenticationCard className={'authentication__card--partner'}>
         <AuthenticationCardHeader
