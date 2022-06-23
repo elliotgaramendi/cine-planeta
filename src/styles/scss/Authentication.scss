@@ -1,0 +1,10 @@
+@import './mixins';
+
+.authentication {
+  padding: 2rem 0;
+
+  &__container {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 1rem);
+    @include container;
+  }
+}
