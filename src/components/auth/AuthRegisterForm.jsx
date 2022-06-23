@@ -1,7 +1,13 @@
 import * as yup from 'yup';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { useDispatch } from 'react-redux';
+import { fetchAuthRegister } from '../../redux/slices/auth.slices';
+import { useNavigate } from 'react-router-dom';
 
 const AuthRegisterForm = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   return (
     <Formik
       initialValues={{
@@ -12,10 +18,11 @@ const AuthRegisterForm = () => {
         email: yup.string().email().required('El correo es requerido'),
         password: yup.string().required('La contraseña es requerido').min(6)
       })}
-      onSubmit={(values, actions) => {
-        console.log(values);
+      onSubmit={async (values, actions) => {
+        await dispatch(fetchAuthRegister(values));
         actions.setSubmitting(false);
-        // actions.resetForm();
+        actions.resetForm();
+        navigate('/dulceria');
       }}
     >
       {({ handleSubmit, isSubmitting }) => {
@@ -38,7 +45,7 @@ const AuthRegisterForm = () => {
                 className="auth__button-secondary"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? <i className="bi bi-arrow-repeat"></i> : <><i className="bi bi-person-circle"></i> Unirme</>}
+                {isSubmitting ? <div className="animate-spin"><i className="bi bi-arrow-repeat"></i></div> : <><i className="bi bi-person-circle"></i> Unirme</>}
               </button>
             </div>
           </Form>

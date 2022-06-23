@@ -1,7 +1,17 @@
+@keyframes animate-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .main {
   width: 100%;
 }
 
 .main--auth {
   margin: auto;
+}
+
+.animate-spin {
+  animation: animate-spin 1s linear infinite;
 }
