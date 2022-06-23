@@ -14,7 +14,8 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "sass": "^1.52.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
