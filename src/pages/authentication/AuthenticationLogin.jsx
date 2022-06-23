@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AuthenticationCard from '../../components/authentication/AuthenticationCard';
+import AuthenticationCardHeader from '../../components/authentication/AuthenticationCardHeader';
 import AuthenticationSection from '../../components/authentication/AuthenticationSection';
 import '../../styles/scss/AuthenticationLogin.scss';
 
@@ -13,10 +14,12 @@ const AuthenticationLogin = () => {
   return (
     <AuthenticationSection>
       <AuthenticationCard>
-        <div className="authentication-login__card-login-header">
-          <h2 className="authentication-login__card-login-title">Iniciar sesión</h2>
-          <p className="authentication-login__card-login-message">Ingresa a tu cuenta para disfrutar de tus beneficios, acumular puntos y vivir al máximo la experiencia Cineverse.</p>
-        </div>
+        <AuthenticationCardHeader
+          content={{
+            title: 'Iniciar sesión',
+            message: 'Ingresa a tu cuenta para disfrutar de tus beneficios, acumular puntos y vivir al máximo la experiencia Cineverse.'
+          }}
+        />
         <form
           className="authentication-login__card-login-form"
         >
@@ -48,10 +51,13 @@ const AuthenticationLogin = () => {
         </form>
       </AuthenticationCard>
       <AuthenticationCard className={'authentication__card--partner'}>
-        <div className="authentication-login__card-partner-header">
-          <h3 className="authentication-login__card-partner-title">¿No eres socio?</h3>
-          <p className="authentication-login__card-partner-message">Registrándote en nuestro programa Socio Cineverse podrás acumular puntos en cada visita que realices y gozar de grandes beneficios.</p>
-        </div>
+        <AuthenticationCardHeader
+          content={{
+            title: '¿No eres socio?',
+            message: 'Registrándote en nuestro programa Socio Cineverse podrás acumular puntos en cada visita que realices y gozar de grandes beneficios.'
+          }}
+          partner={true}
+        />
         <div className="authentication-login__card-partner-link-container">
           <Link
             to="/autenticacion/registro"

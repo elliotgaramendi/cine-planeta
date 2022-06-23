@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AuthenticationCard from '../../components/authentication/AuthenticationCard';
+import AuthenticationCardHeader from '../../components/authentication/AuthenticationCardHeader';
 import AuthenticationSection from '../../components/authentication/AuthenticationSection';
 import '../../styles/scss/AuthenticationRegister.scss';
 
@@ -13,10 +14,12 @@ const AuthenticationRegister = () => {
   return (
     <AuthenticationSection>
       <AuthenticationCard>
-        <div className="authentication-register__card-register-header">
-          <h2 className="authentication-register__card-register-title">Únete</h2>
-          <p className="authentication-register__card-register-message">Completa tus datos y accede a nuestro universo de beneficios</p>
-        </div>
+        <AuthenticationCardHeader
+          content={{
+            title: 'Únete',
+            message: 'Completa tus datos y accede a nuestro universo de beneficios'
+          }}
+        />
         <form
           className="authentication-register__card-register-form"
         >
@@ -40,10 +43,13 @@ const AuthenticationRegister = () => {
         </form>
       </AuthenticationCard>
       <AuthenticationCard className={'authentication__card--partner'}>
-        <div className="authentication-register__card-partner-header">
-          <h3 className="authentication-register__card-partner-title">¿Ya eres socio?</h3>
-          <p className="authentication-register__card-partner-message">Iniciando sesión en nuestro programa Socio Cineverse podrás acumular puntos en cada visita que realices y gozar de grandes beneficios.</p>
-        </div>
+        <AuthenticationCardHeader
+          content={{
+            title: '¿Ya eres socio?',
+            message: 'Iniciando sesión en nuestro programa Socio Cineverse podrás acumular puntos en cada visita que realices y gozar de grandes beneficios.'
+          }}
+          partner={true}
+        />
         <Link
           to="/autenticacion/login"
           className="authentication-register__card-partner-login"

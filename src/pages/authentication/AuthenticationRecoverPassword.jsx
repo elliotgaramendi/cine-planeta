@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AuthenticationCard from '../../components/authentication/AuthenticationCard';
+import AuthenticationCardHeader from '../../components/authentication/AuthenticationCardHeader';
 import AuthenticationSection from '../../components/authentication/AuthenticationSection';
 import '../../styles/scss/AuthenticationRecoverPassword.scss';
 
@@ -13,10 +14,12 @@ const AuthenticationRecoverPassword = () => {
   return (
     <AuthenticationSection>
       <AuthenticationCard>
-        <div className="authentication-recover__card-recover-header">
-          <h2 className="authentication-recover__card-recover-title">¿Olvidaste tu contraseña?</h2>
-          <p className="authentication-recover__card-recover-message">Ingresa tu dirección de email registrada y te enviaremos un correo para que puedas crear una nueva contraseña.</p>
-        </div>
+        <AuthenticationCardHeader
+          content={{
+            title: '¿Olvidaste tu contraseña?',
+            message: 'Ingresa tu dirección de email registrada y te enviaremos un correo para que puedas crear una nueva contraseña.'
+          }}
+        />
         <form
           className="authentication-recover__card-recover-form"
         >
@@ -43,10 +46,13 @@ const AuthenticationRecoverPassword = () => {
         </form>
       </AuthenticationCard>
       <AuthenticationCard className={'authentication__card--partner'}>
-        <div className="authentication-recover__card-partner-header">
-          <h3 className="authentication-recover__card-partner-title">¿Algo anda mal?</h3>
-          <p className="authentication-recover__card-partner-message">¿Ya tienes cuenta? o ¿No tienes cuenta?</p>
-        </div>
+        <AuthenticationCardHeader
+          content={{
+            title: '¿Algo anda mal?',
+            message: '¿Ya tienes cuenta? o ¿No tienes cuenta?'
+          }}
+          partner={true}
+        />
         <div className="authentication-recover__card-partner-link-container">
           <Link
             to="/autenticacion/login"
