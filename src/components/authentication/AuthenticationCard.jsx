@@ -4,6 +4,6 @@ const AuthenticationCard = ({ children, className }) => {
       {children}
     </div>
   );
-}
+};
 
 export default AuthenticationCard;

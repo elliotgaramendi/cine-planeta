@@ -97,6 +97,6 @@ const Footer = () => {
       <FooterNavFooter />
     </footer>
   );
-}
+};
 
 export default Footer;

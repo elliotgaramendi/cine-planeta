@@ -33,6 +33,6 @@ const HeaderNavTheme = () => {
       <span className="header-nav__theme-icon"><i className="bi bi-sun"></i></span>
     </button>
   );
-}
+};
 
 export default HeaderNavTheme;

@@ -21,6 +21,6 @@ const AuthenticationHeader = ({ applicationName }) => {
       </nav>
     </header>
   );
-}
+};
 
 export default AuthenticationHeader;

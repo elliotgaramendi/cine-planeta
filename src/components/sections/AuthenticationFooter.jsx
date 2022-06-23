@@ -7,6 +7,6 @@ const AuthenticationFooter = () => {
       <FooterNavFooter className={'footer-nav-footer--authentication'} />
     </footer>
   );
-}
+};
 
 export default AuthenticationFooter;

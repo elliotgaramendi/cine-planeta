@@ -8,6 +8,6 @@ const AuthenticationSection = ({ children }) => {
       </div>
     </section>
   );
-}
+};
 
 export default AuthenticationSection;
