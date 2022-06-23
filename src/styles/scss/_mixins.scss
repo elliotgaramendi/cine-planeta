@@ -101,10 +101,6 @@
   }
 }
 
-@mixin card-header-form-link {
-  
-}
-
 @mixin desktop() {
   @media (min-width: 854px) {
     @content;
