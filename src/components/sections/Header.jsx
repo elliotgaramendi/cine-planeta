@@ -1,24 +1,12 @@
 import '../../styles/scss/Header.scss';
 import { useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from "react-router-dom";
+import HeaderNavTheme from '../headers/HeaderNavTheme';
 
 const Header = ({ applicationName }) => {
   let location = useLocation();
   const header = useRef();
   const headerNavMenuLinkListContainer = useRef();
-  const headerNavThemeIconContainer = useRef();
-
-  const toggleTheme = () => {
-    const body = document.querySelector('.body');
-    body.classList.toggle('body--dark');
-    headerNavThemeIconContainer.current.classList.toggle('header-nav__theme-icon-container--active');
-
-    if (body.classList.contains('body--dark')) {
-      localStorage.setItem('darkMode', true);
-    } else {
-      localStorage.setItem('darkMode', false);
-    }
-  };
 
   const openMenu = () => {
     header.current.classList.add('header--open');
@@ -39,31 +27,6 @@ const Header = ({ applicationName }) => {
   };
 
   document.addEventListener('scroll', documentScroll);
-
-  useEffect(() => {
-    // const intersectionObserverSection = new IntersectionObserver((entries) => {
-    //   entries.forEach((entry) => {
-    //     if (entry.isIntersecting) {
-    //       if (entry.target.classList.contains('slick-slider')) {
-    //         console.log('slider');
-    //         header.current.classList.add('header--home');
-    //       } else {
-    //         console.log('not slider');
-    //         header.current.classList.remove('header--home');
-    //       }
-    //     }
-    //   });
-    // }, { rootMargin: '-7.5% 0px -92.5% 0px' });
-
-    // intersectionObserverSection.observe(document.querySelector('.home-gallery'));
-    // intersectionObserverSection.observe(document.querySelector('.slick-slider'));
-
-    if (localStorage.getItem('darkMode') === 'false' || localStorage.getItem('darkMode') === null) {
-      headerNavThemeIconContainer.current.classList.remove('header-nav__theme-icon-container--active');
-    } else {
-      headerNavThemeIconContainer.current.classList.add('header-nav__theme-icon-container--active');
-    }
-  }, []);
 
   useEffect(() => {
     if (location.pathname === '/') {
@@ -159,14 +122,7 @@ const Header = ({ applicationName }) => {
               <span className="header-nav__person-message">Únete</span>
               <i className="bi bi-person-circle"></i>
             </Link>
-            <button
-              className="header-nav__theme-icon-container"
-              ref={headerNavThemeIconContainer}
-              onClick={toggleTheme}
-            >
-              <span className="header-nav__theme-icon"><i className="bi bi-moon"></i></span>
-              <span className="header-nav__theme-icon"><i className="bi bi-sun"></i></span>
-            </button>
+            <HeaderNavTheme />
           </div>
         </div>
       </nav>

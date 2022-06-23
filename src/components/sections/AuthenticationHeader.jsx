@@ -1,30 +1,9 @@
 import '../../styles/scss/AuthenticationHeader.scss';
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useRef } from 'react';
+import HeaderNavTheme from '../headers/HeaderNavTheme';
 
 const AuthenticationHeader = ({ applicationName }) => {
   const navigate = useNavigate();
-  const themeIconContainer = useRef();
-
-  const toggleTheme = () => {
-    const body = document.querySelector('.body');
-    body.classList.toggle('body--dark');
-    themeIconContainer.current.classList.toggle('authentication-header-nav__theme-icon-container--active');
-
-    if (body.classList.contains('body--dark')) {
-      localStorage.setItem('darkMode', true);
-    } else {
-      localStorage.setItem('darkMode', false);
-    }
-  };
-  useEffect(() => {
-    if (localStorage.getItem('darkMode') === 'false' || localStorage.getItem('darkMode') === null) {
-      themeIconContainer.current.classList.remove('authentication-header-nav__theme-icon-container--active');
-    } else {
-      themeIconContainer.current.classList.add('authentication-header-nav__theme-icon-container--active');
-    }
-  }, []);
-
   return (
     <header className="authentication-header">
       <nav className="authentication-header-nav">
@@ -37,14 +16,7 @@ const AuthenticationHeader = ({ applicationName }) => {
             Atrás
           </button>
           <Link to="/" className="authentication-header-nav__home-logo">{applicationName}</Link>
-          <button
-            className="authentication-header-nav__theme-icon-container"
-            ref={themeIconContainer}
-            onClick={toggleTheme}
-          >
-            <span className="authentication-header-nav__theme-icon"><i className="bi bi-moon"></i></span>
-            <span className="authentication-header-nav__theme-icon"><i className="bi bi-sun"></i></span>
-          </button>
+          <HeaderNavTheme />
         </div>
       </nav>
     </header>

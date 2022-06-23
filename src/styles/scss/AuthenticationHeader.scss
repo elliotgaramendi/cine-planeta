@@ -39,12 +39,4 @@
       line-height: 2rem;
     }
   }
-
-  &__theme-icon-container {
-    @include theme-icon-container;
-  }
-
-  &__theme-icon {
-    @include theme-icon;
-  }
 }
