@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AuthenticationCard from '../../components/authentication/AuthenticationCard';
 import AuthenticationSection from '../../components/authentication/AuthenticationSection';
 import '../../styles/scss/AuthenticationLogin.scss';
 
@@ -11,7 +12,7 @@ const AuthenticationLogin = () => {
 
   return (
     <AuthenticationSection>
-      <div className="authentication-login__card-login">
+      <AuthenticationCard>
         <div className="authentication-login__card-login-header">
           <h2 className="authentication-login__card-login-title">Iniciar sesión</h2>
           <p className="authentication-login__card-login-message">Ingresa a tu cuenta para disfrutar de tus beneficios, acumular puntos y vivir al máximo la experiencia Cineverse.</p>
@@ -45,8 +46,8 @@ const AuthenticationLogin = () => {
             </button>
           </div>
         </form>
-      </div>
-      <div className="authentication-login__card-partner">
+      </AuthenticationCard>
+      <AuthenticationCard className={'authentication__card--partner'}>
         <div className="authentication-login__card-partner-header">
           <h3 className="authentication-login__card-partner-title">¿No eres socio?</h3>
           <p className="authentication-login__card-partner-message">Registrándote en nuestro programa Socio Cineverse podrás acumular puntos en cada visita que realices y gozar de grandes beneficios.</p>
@@ -65,7 +66,7 @@ const AuthenticationLogin = () => {
             Seguir como invitado
           </Link>
         </div>
-      </div>
+      </AuthenticationCard>
     </AuthenticationSection>
   );
 };

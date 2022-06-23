@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AuthenticationCard from '../../components/authentication/AuthenticationCard';
 import AuthenticationSection from '../../components/authentication/AuthenticationSection';
 import '../../styles/scss/AuthenticationRecoverPassword.scss';
 
@@ -11,7 +12,7 @@ const AuthenticationRecoverPassword = () => {
 
   return (
     <AuthenticationSection>
-      <div className="authentication-recover__card-recover">
+      <AuthenticationCard>
         <div className="authentication-recover__card-recover-header">
           <h2 className="authentication-recover__card-recover-title">¿Olvidaste tu contraseña?</h2>
           <p className="authentication-recover__card-recover-message">Ingresa tu dirección de email registrada y te enviaremos un correo para que puedas crear una nueva contraseña.</p>
@@ -40,8 +41,8 @@ const AuthenticationRecoverPassword = () => {
             </button>
           </div>
         </form>
-      </div>
-      <div className="authentication-recover__card-partner">
+      </AuthenticationCard>
+      <AuthenticationCard className={'authentication__card--partner'}>
         <div className="authentication-recover__card-partner-header">
           <h3 className="authentication-recover__card-partner-title">¿Algo anda mal?</h3>
           <p className="authentication-recover__card-partner-message">¿Ya tienes cuenta? o ¿No tienes cuenta?</p>
@@ -60,7 +61,7 @@ const AuthenticationRecoverPassword = () => {
             <i className="bi bi-person-circle"></i> Únete
           </Link>
         </div>
-      </div>
+      </AuthenticationCard>
     </AuthenticationSection>
   );
 };

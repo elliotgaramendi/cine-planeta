@@ -1,10 +1,6 @@
 @import './mixins';
 
 .authentication-register {
-  &__card-register {
-    @include card-header-form-link;
-  }
-
   &__card-register-header {
     @include d-flex-fd-ai-jc-g(column, stretch, stretch, 0.5rem);
     text-align: center;
@@ -42,16 +38,6 @@
       font-size: 1rem;
       justify-self: center;
       grid-column: span 2;
-    }
-  }
-
-  &__card-partner {
-    @include card-header-form-link;
-    box-shadow: none;
-
-    @include desktop() {
-      gap: 2rem;
-      box-shadow: none;
     }
   }
 
