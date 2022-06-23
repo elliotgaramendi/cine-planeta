@@ -4,7 +4,6 @@ import AuthenticationCard from '../../components/authentication/AuthenticationCa
 import AuthenticationCardHeader from '../../components/authentication/AuthenticationCardHeader';
 import AuthenticationRecoverPasswordForm from '../../components/authentication/AuthenticationRecoverPasswordForm';
 import AuthenticationSection from '../../components/authentication/AuthenticationSection';
-import '../../styles/scss/AuthenticationRecoverPassword.scss';
 
 const AuthenticationRecoverPassword = () => {
   useEffect(() => {
@@ -31,16 +30,16 @@ const AuthenticationRecoverPassword = () => {
           }}
           partner={true}
         />
-        <div className="authentication-recover__card-partner-link-container">
+        <div className="authentication__button-container">
           <Link
             to="/autenticacion/login"
-            className="authentication-recover__card-partner-login"
+            className="authentication__button-primary"
           >
             <i className="bi bi-person"></i> Iniciar sesión
           </Link>
           <Link
             to="/autenticacion/registro"
-            className="authentication-recover__card-partner-register"
+            className="authentication__button-secondary"
           >
             <i className="bi bi-person-circle"></i> Únete
           </Link>

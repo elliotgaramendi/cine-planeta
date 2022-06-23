@@ -35,6 +35,7 @@ const AuthenticationRecoverPasswordForm = () => {
                 Cancelar
               </Link>
               <button
+                type="submit"
                 className="authentication__button-primary"
                 disabled={isSubmitting}
               >
