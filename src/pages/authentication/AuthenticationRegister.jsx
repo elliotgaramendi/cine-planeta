@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AuthenticationCard from '../../components/authentication/AuthenticationCard';
 import AuthenticationCardHeader from '../../components/authentication/AuthenticationCardHeader';
+import AuthenticationRegisterForm from '../../components/authentication/AuthenticationRegisterForm';
 import AuthenticationSection from '../../components/authentication/AuthenticationSection';
 import '../../styles/scss/AuthenticationRegister.scss';
 
@@ -20,27 +21,7 @@ const AuthenticationRegister = () => {
             message: 'Completa tus datos y accede a nuestro universo de beneficios'
           }}
         />
-        <form
-          className="authentication-register__card-register-form"
-        >
-          <input
-            type="email"
-            placeholder="Email"
-            name="email"
-            className="authentication-register__card-register-input"
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            className="authentication-register__card-register-input"
-            required
-          />
-          <button className="authentication-register__card-register-button">
-            <i className="bi bi-person-circle"></i> Unirme
-          </button>
-        </form>
+        <AuthenticationRegisterForm />
       </AuthenticationCard>
       <AuthenticationCard className={'authentication__card--partner'}>
         <AuthenticationCardHeader

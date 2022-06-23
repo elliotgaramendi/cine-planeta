@@ -1,29 +1,6 @@
 @import './mixins';
 
 .authentication-register {
-  &__card-register-form {
-    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 1rem);
-
-    @include desktop() {
-      @include d-grid-gtc-g(1fr 1fr, 2rem);
-    }
-  }
-
-  &__card-register-input {
-    @include input;
-  }
-
-  &__card-register-button {
-    @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--secondary-active-button-color));
-    align-self: center;
-
-    @include desktop() {
-      font-size: 1rem;
-      justify-self: center;
-      grid-column: span 2;
-    }
-  }
-
   &__card-partner-login {
     @include button(var(--primary-button-color), #0050b280, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--primary-active-button-color));
     align-self: center;

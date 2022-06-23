@@ -62,4 +62,38 @@
       @include text(var(--secondary-text-color));
     }
   }
+
+  &__form {
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 1.5rem);
+
+    @include desktop() {
+      @include d-grid-gtc-g(1fr 1fr, 2rem);
+    }
+  }
+
+  &__form-input {
+    @include input;
+  }
+
+  &__form-button-container {
+    @include d-flex-fd-ai-jc-g(row, stretch, center, 0.75rem);
+
+    &--register {
+      grid-column: span 2;
+    }
+  }
+
+  &__form-button {
+    align-self: center;
+
+    @include desktop() {
+      font-size: 1rem;
+    }
+
+    &--register {
+      @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--secondary-active-button-color));
+
+    }
+  }
+
 }
