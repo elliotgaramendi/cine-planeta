@@ -176,7 +176,7 @@
   padding: 1.5rem 0;
   transition: var(--secondary-all-transitions);
 
-  &--authentication {
+  &--auth {
     padding: 1rem 0;
     border-bottom: 0.25rem solid var(--secondary-highlight-color);
   }
@@ -185,7 +185,7 @@
     border-top: 0.375rem solid var(--secondary-highlight-color);
     padding: 1.75rem 0;
 
-    &--authentication {
+    &--auth {
       border-top: 0.25rem solid var(--secondary-highlight-color);
       border-bottom: 0.25rem solid var(--secondary-highlight-color);
       padding: 1.25rem 0;

@@ -1,7 +1,7 @@
 import * as yup from 'yup';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 
-const AuthenticationRegisterForm = () => {
+const AuthRegisterForm = () => {
   return (
     <Formik
       initialValues={{
@@ -22,20 +22,20 @@ const AuthenticationRegisterForm = () => {
         return (
           <Form
             onSubmit={handleSubmit}
-            className="authentication__form authentication__form--grid-cols-2-gap-8"
+            className="auth__form auth__form--grid-cols-2-gap-8"
           >
-            <div className="authentication__form-input-container">
-              <Field name="email" type="text" placeholder="Email" className="authentication__form-input" required />
-              <ErrorMessage name="email" component="div" className="authentication__form-error" />
+            <div className="auth__form-input-container">
+              <Field name="email" type="text" placeholder="Email" className="auth__form-input" required />
+              <ErrorMessage name="email" component="div" className="auth__form-error" />
             </div>
-            <div className="authentication__form-input-container">
-              <Field name="password" type="password" placeholder="Password" className="authentication__form-input" required />
-              <ErrorMessage name="password" component="div" className="authentication__form-error" />
+            <div className="auth__form-input-container">
+              <Field name="password" type="password" placeholder="Password" className="auth__form-input" required />
+              <ErrorMessage name="password" component="div" className="auth__form-error" />
             </div>
-            <div className="authentication__button-container authentication__button-container--col-span-2">
+            <div className="auth__button-container auth__button-container--col-span-2">
               <button
                 type="submit"
-                className="authentication__button-secondary"
+                className="auth__button-secondary"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? <i className="bi bi-arrow-repeat"></i> : <><i className="bi bi-person-circle"></i> Unirme</>}
@@ -48,4 +48,4 @@ const AuthenticationRegisterForm = () => {
   );
 };
 
-export default AuthenticationRegisterForm;
+export default AuthRegisterForm;

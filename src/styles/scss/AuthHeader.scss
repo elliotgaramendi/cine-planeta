@@ -1,6 +1,6 @@
 @import './mixins';
 
-.authentication-header {
+.auth-header {
   background-color: var(--primary-theme-color);
   border-top: 0.25rem solid var(--primary-text-color);
   border-bottom: 0.25rem solid var(--primary-text-color);
@@ -8,7 +8,7 @@
   transition: var(--primary-all-transitions);
 }
 
-.authentication-header-nav {
+.auth-header-nav {
   padding: 0.75rem 0;
 
   &__container {

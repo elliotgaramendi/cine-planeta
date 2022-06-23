@@ -2,7 +2,7 @@ import * as yup from 'yup';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { Link } from 'react-router-dom';
 
-const AuthenticationRecoverPasswordForm = () => {
+const AuthRecoverPasswordForm = () => {
   return (
     <Formik
       initialValues={{
@@ -21,22 +21,22 @@ const AuthenticationRecoverPasswordForm = () => {
         return (
           <Form
             onSubmit={handleSubmit}
-            className="authentication__form"
+            className="auth__form"
           >
-            <div className="authentication__form-input-container">
-              <Field name="email" type="text" placeholder="Email" className="authentication__form-input" required />
-              <ErrorMessage name="email" component="div" className="authentication__form-error" />
+            <div className="auth__form-input-container">
+              <Field name="email" type="text" placeholder="Email" className="auth__form-input" required />
+              <ErrorMessage name="email" component="div" className="auth__form-error" />
             </div>
-            <div className="authentication__button-container">
+            <div className="auth__button-container">
               <Link
                 to="/autenticacion/login"
-                className="authentication__button-primary authentication__button-primary--outline"
+                className="auth__button-primary auth__button-primary--outline"
               >
                 Cancelar
               </Link>
               <button
                 type="submit"
-                className="authentication__button-primary"
+                className="auth__button-primary"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? <i className="bi bi-arrow-repeat"></i> : <>Recuperar <i className="bi bi-chevron-right"></i></>}
@@ -49,4 +49,4 @@ const AuthenticationRecoverPasswordForm = () => {
   );
 };
 
-export default AuthenticationRecoverPasswordForm;
+export default AuthRecoverPasswordForm;

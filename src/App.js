@@ -7,10 +7,10 @@ import {
 } from 'react-router-dom';
 import CinemasLayout from './layouts/CinemasLayout';
 import CinemasHome from './pages/cinemas/CinemasHome';
-import AuthenticationLayout from './layouts/AuthenticationLayout';
-import AuthenticationRegister from './pages/authentication/AuthenticationRegister';
-import AuthenticationLogin from './pages/authentication/AuthenticationLogin';
-import AuthenticationRecoverPassword from './pages/authentication/AuthenticationRecoverPassword';
+import AuthLayout from './layouts/AuthLayout';
+import AuthRegister from './pages/auth/AuthRegister';
+import AuthLogin from './pages/auth/AuthLogin';
+import AuthRecoverPassword from './pages/auth/AuthRecoverPassword';
 
 function App() {
   return (
@@ -21,10 +21,10 @@ function App() {
           <Route index element={<CinemasHome />} />
           <Route path='*' element={<h1>404</h1>} />
         </Route>
-        <Route path='/autenticacion' element={<AuthenticationLayout />} >
-          <Route path='registro' element={<AuthenticationRegister />} />
-          <Route path='login' element={<AuthenticationLogin />} />
-          <Route path='recuperar-contrasena' element={<AuthenticationRecoverPassword />} />
+        <Route path='/autenticacion' element={<AuthLayout />} >
+          <Route path='registro' element={<AuthRegister />} />
+          <Route path='login' element={<AuthLogin />} />
+          <Route path='recuperar-contrasena' element={<AuthRecoverPassword />} />
         </Route>
       </Routes>
     </Provider>
