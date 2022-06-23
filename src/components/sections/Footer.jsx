@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 import '../../styles/scss/Footer.scss';
+import FooterNavFooter from '../footers/FooterNavFooter';
 
-const Footer = ({ credits }) => {
-  const { author, year } = credits;
-
+const Footer = () => {
   return (
     <footer className="footer">
       <nav className="footer-nav">
@@ -95,13 +94,7 @@ const Footer = ({ credits }) => {
           </div>
         </div>
       </nav>
-      <nav className="footer-nav-footer">
-        <div className="footer-nav-footer__container">
-          <Link to="/" className="footer-nav-footer__subtitle">Condiciones de uso y seguridad</Link>
-          <h5 className="footer-nav-footer__subtitle">Copyright &copy; {year} <a href="https://www.linkedin.com/in/elliotgaramendi/" className="footer-nav-footer__subtitle-author" target="_blank" rel="noopener noreferrer">{author}</a></h5>
-          <Link to="/" className="footer-nav-footer__subtitle footer-nav-footer__subtitle--icon"><span className="footer-nav-footer__subtitle-icon"><i className="bi bi-book"></i></span> Libro de reclamaciones</Link>
-        </div>
-      </nav>
+      <FooterNavFooter />
     </footer>
   );
 }

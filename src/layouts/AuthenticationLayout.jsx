@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import AuthenticationFooter from "../components/sections/AuthenticationFooter";
 import AuthenticationHeader from "../components/sections/AuthenticationHeader";
-import { applicationName, credits } from "../utils/generalInformation";
+import { applicationName } from "../utils/generalInformation";
 
 const AuthenticationLayout = () => {
   return (
@@ -12,9 +12,7 @@ const AuthenticationLayout = () => {
       <main className="main main--authentication">
         <Outlet />
       </main>
-      <AuthenticationFooter
-        credits={credits}
-      />
+      <AuthenticationFooter />
     </>
   );
 };
