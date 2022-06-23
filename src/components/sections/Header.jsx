@@ -2,8 +2,10 @@ import '../../styles/scss/Header.scss';
 import { useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from "react-router-dom";
 import HeaderNavTheme from '../headers/HeaderNavTheme';
+import { useSelector } from "react-redux";
 
 const Header = ({ applicationName }) => {
+  const { user } = useSelector(state => state.authStore);
   let location = useLocation();
   const header = useRef();
   const headerNavMenuLinkListContainer = useRef();
@@ -119,7 +121,7 @@ const Header = ({ applicationName }) => {
               to="/autenticacion/login"
               className="header-nav__person-container"
             >
-              <span className="header-nav__person-message">Únete</span>
+              <span className="header-nav__person-message">{user.email ? user.email : 'Únete'}</span>
               <i className="bi bi-person-circle"></i>
             </Link>
             <HeaderNavTheme />

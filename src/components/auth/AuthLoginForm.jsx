@@ -1,8 +1,13 @@
 import * as yup from 'yup';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { fetchAuthLogin } from '../../redux/slices/auth.slices';
 
 const AuthLoginForm = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   return (
     <Formik
       initialValues={{
@@ -13,10 +18,11 @@ const AuthLoginForm = () => {
         email: yup.string().email().required('El correo es requerido'),
         password: yup.string().required('La contraseña es requerido').min(6)
       })}
-      onSubmit={(values, actions) => {
-        console.log(values);
+      onSubmit={async (values, actions) => {
+        await dispatch(fetchAuthLogin(values));
         actions.setSubmitting(false);
-        // actions.resetForm();
+        actions.resetForm();
+        navigate('/dulceria');
       }}
     >
       {({ handleSubmit, isSubmitting }) => {
@@ -45,7 +51,7 @@ const AuthLoginForm = () => {
                 className="auth__button-primary"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? <i className="bi bi-arrow-repeat"></i> : <><i className="bi bi-person"></i> Ingresar</>}
+                {isSubmitting ? <div className="animate-spin"><i className="bi bi-arrow-repeat"></i></div> : <><i className="bi bi-person"></i> Ingresar</>}
               </button>
             </div>
           </Form>

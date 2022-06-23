@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../configs/authFirebase";
 
 const initialState = {
@@ -33,6 +33,28 @@ const authSlices = createSlice({
         error: action.payload,
         user: {}
       };
+    },
+    fetchAuthLoginRequest(state, action) {
+      return {
+        ...state,
+        loading: action.payload
+      };
+    },
+    fetchAuthLoginSuccess(state, action) {
+      return {
+        ...state,
+        loading: false,
+        error: {},
+        user: action.payload
+      };
+    },
+    fetchAuthLoginError(state, action) {
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+        user: {}
+      };
     }
   }
 });
@@ -40,7 +62,10 @@ const authSlices = createSlice({
 const {
   fetchAuthRegisterError,
   fetchAuthRegisterRequest,
-  fetchAuthRegisterSuccess
+  fetchAuthRegisterSuccess,
+  fetchAuthLoginError,
+  fetchAuthLoginRequest,
+  fetchAuthLoginSuccess
 } = authSlices.actions;
 
 export const fetchAuthRegister = (user) => {
@@ -52,6 +77,19 @@ export const fetchAuthRegister = (user) => {
       dispatch(fetchAuthRegisterSuccess(userCredential.user.reloadUserInfo));
     } catch (error) {
       dispatch(fetchAuthRegisterError(error));
+    }
+  });
+};
+
+export const fetchAuthLogin = (user) => {
+  return (async (dispatch) => {
+    dispatch(fetchAuthLoginRequest(true));
+    try {
+      const { email, password } = user;
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      dispatch(fetchAuthLoginSuccess(userCredential.user.reloadUserInfo));
+    } catch (error) {
+      dispatch(fetchAuthLoginError(error));
     }
   });
 };
