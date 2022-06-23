@@ -13,7 +13,7 @@ const AuthLogin = () => {
 
   return (
     <AuthSection>
-      <AuthCard>
+      <AuthCard shadow={true}>
         <AuthCardHeader
           content={{
             title: 'Iniciar sesión',
@@ -22,7 +22,7 @@ const AuthLogin = () => {
         />
         <AuthLoginForm />
       </AuthCard>
-      <AuthCard className={'auth__card--partner'}>
+      <AuthCard>
         <AuthCardHeader
           content={{
             title: '¿No eres socio?',

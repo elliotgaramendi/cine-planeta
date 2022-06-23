@@ -13,7 +13,7 @@ const AuthRecoverPassword = () => {
 
   return (
     <AuthSection>
-      <AuthCard>
+      <AuthCard shadow={true}>
         <AuthCardHeader
           content={{
             title: '¿Olvidaste tu contraseña?',
@@ -22,7 +22,7 @@ const AuthRecoverPassword = () => {
         />
         <AuthRecoverPasswordForm />
       </AuthCard>
-      <AuthCard className={'auth__card--partner'}>
+      <AuthCard>
         <AuthCardHeader
           content={{
             title: '¿Algo anda mal?',

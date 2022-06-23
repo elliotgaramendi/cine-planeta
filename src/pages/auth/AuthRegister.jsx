@@ -13,7 +13,7 @@ const AuthRegister = () => {
 
   return (
     <AuthSection>
-      <AuthCard>
+      <AuthCard shadow={true}>
         <AuthCardHeader
           content={{
             title: 'Únete',
@@ -22,7 +22,7 @@ const AuthRegister = () => {
         />
         <AuthRegisterForm />
       </AuthCard>
-      <AuthCard className={'auth__card--partner'}>
+      <AuthCard>
         <AuthCardHeader
           content={{
             title: '¿Ya eres socio?',
