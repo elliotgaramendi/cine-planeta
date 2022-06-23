@@ -64,15 +64,54 @@
   }
 
   &__form {
-    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 1.5rem);
+    @include d-flex-fd-ai-jc-g(column, stretch, stretch, 2rem);
 
     @include desktop() {
       @include d-grid-gtc-g(1fr 1fr, 2rem);
     }
   }
 
+  &__form-input-container {
+    position: relative;
+    @include d-flex-fd-ai-jc-g(column);
+  }
+
   &__form-input {
-    @include input;
+    background: transparent;
+    border: none;
+    border-bottom: 0.0625px solid var(--quinary-text-color);
+    @include text(var(--tertiary-text-color), 300, 1rem);
+    padding: 0.25rem 0.5rem;
+    box-sizing: border-box;
+
+    &:invalid {
+      border-color: var(--secondary-highlight-color);
+      color: var(--secondary-highlight-color);
+
+      &::placeholder {
+        color: var(--secondary-highlight-color);
+      }
+    }
+
+    @include desktop() {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__form-error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--primary-invalid-text-color);
+    font-size: 0.75rem;
+    transition: var(--primary-all-transitions);
+
+    @include desktop() {
+      left: 0.5rem;
+      right: auto;
+    }
   }
 
   &__form-button-container {
@@ -83,6 +122,7 @@
     }
   }
 
+
   &__form-button {
     align-self: center;
 
@@ -92,7 +132,6 @@
 
     &--register {
       @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--secondary-active-button-color));
-
     }
   }
 
