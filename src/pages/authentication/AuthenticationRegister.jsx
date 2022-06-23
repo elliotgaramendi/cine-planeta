@@ -4,7 +4,6 @@ import AuthenticationCard from '../../components/authentication/AuthenticationCa
 import AuthenticationCardHeader from '../../components/authentication/AuthenticationCardHeader';
 import AuthenticationRegisterForm from '../../components/authentication/AuthenticationRegisterForm';
 import AuthenticationSection from '../../components/authentication/AuthenticationSection';
-import '../../styles/scss/AuthenticationRegister.scss';
 
 const AuthenticationRegister = () => {
   useEffect(() => {
@@ -31,12 +30,14 @@ const AuthenticationRegister = () => {
           }}
           partner={true}
         />
-        <Link
-          to="/autenticacion/login"
-          className="authentication__button-primary"
-        >
-          <i className="bi bi-person"></i> Iniciar sesión
-        </Link>
+        <div className="authentication__button-container authentication__button-container--col-span-2">
+          <Link
+            to="/autenticacion/login"
+            className="authentication__button-primary"
+          >
+            <i className="bi bi-person"></i> Iniciar sesión
+          </Link>
+        </div>
       </AuthenticationCard>
     </AuthenticationSection>
   );
