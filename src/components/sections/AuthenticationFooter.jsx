@@ -4,7 +4,7 @@ import FooterNavFooter from '../footers/FooterNavFooter';
 const AuthenticationFooter = () => {
   return (
     <footer className="authentication-footer">
-      <FooterNavFooter />
+      <FooterNavFooter className={'footer-nav-footer--authentication'} />
     </footer>
   );
 }
