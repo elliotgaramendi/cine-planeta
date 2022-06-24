@@ -25,11 +25,13 @@ const AuthRegisterForm = () => {
         try {
           dispatch(fetchAuthRegisterRequest(true));
           const userCredential = await signUp(values);
-          dispatch(fetchAuthRegisterSuccess(userCredential.user.reloadUserInfo));
+          const { reloadUserInfo } = userCredential.user;
+          dispatch(fetchAuthRegisterSuccess(reloadUserInfo));
           actions.setSubmitting(false);
           actions.resetForm();
+          localStorage.setItem('user-info', JSON.stringify(reloadUserInfo));
           navigate('/dulceria');
-          showToast('success', `Bienvenido ${userCredential.user.reloadUserInfo.email}`);
+          showToast('success', `Bienvenido ${reloadUserInfo.email}`);
         } catch (error) {
           dispatch(fetchAuthRegisterError(error));
           showToast('error', error.message);

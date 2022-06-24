@@ -25,12 +25,14 @@ const AuthLoginForm = () => {
         try {
           dispatch(fetchAuthLoginRequest(true));
           const userCredential = await signIn(values);
-          dispatch(fetchAuthLoginSuccess(userCredential.user.reloadUserInfo));
+          const { reloadUserInfo } = userCredential.user;
+          dispatch(fetchAuthLoginSuccess(reloadUserInfo));
           actions.setSubmitting(false);
           actions.resetForm();
+          localStorage.setItem('user-info', JSON.stringify(reloadUserInfo));
           Swal.fire({
             title: '¡Bienvenido!',
-            text: `¡Es un gusto volver a verte ${userCredential.user.reloadUserInfo.email}!`,
+            text: `¡Es un gusto volver a verte ${reloadUserInfo.email}!`,
             icon: 'success',
             background: '#20232a',
             color: '#fff',
