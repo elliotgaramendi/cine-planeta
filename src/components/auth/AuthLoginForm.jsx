@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { fetchAuthLoginError, fetchAuthLoginRequest, fetchAuthLoginSuccess } from '../../redux/slices/auth.slices';
 import { signIn } from '../../utils/firebase';
+import { showToast } from '../../utils/sweetAlert2';
+import Swal from 'sweetalert2';
 
 const AuthLoginForm = () => {
   const dispatch = useDispatch();
@@ -26,9 +28,21 @@ const AuthLoginForm = () => {
           dispatch(fetchAuthLoginSuccess(userCredential.user.reloadUserInfo));
           actions.setSubmitting(false);
           actions.resetForm();
-          navigate('/dulceria');
+          Swal.fire({
+            title: '¡Bienvenido!',
+            text: `¡Es un gusto volver a verte ${userCredential.user.reloadUserInfo.email}!`,
+            icon: 'success',
+            background: '#20232a',
+            color: '#fff',
+            confirmButtonColor: '#61dafb80',
+            confirmButtonText: '¡Continuar!',
+            timer: 2500
+          }).then(() => {
+            navigate('/dulceria');
+          });
         } catch (error) {
           dispatch(fetchAuthLoginError(error));
+          showToast('error', error.message);
         }
       }}
     >

@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { signUp } from '../../utils/firebase';
 import { fetchAuthRegisterError, fetchAuthRegisterRequest, fetchAuthRegisterSuccess } from '../../redux/slices/auth.slices';
+import { showToast } from '../../utils/sweetAlert2';
 
 const AuthRegisterForm = () => {
   const dispatch = useDispatch();
@@ -28,8 +29,10 @@ const AuthRegisterForm = () => {
           actions.setSubmitting(false);
           actions.resetForm();
           navigate('/dulceria');
+          showToast('success', `Bienvenido ${userCredential.user.reloadUserInfo.email}`);
         } catch (error) {
           dispatch(fetchAuthRegisterError(error));
+          showToast('error', error.message);
         }
       }}
     >
