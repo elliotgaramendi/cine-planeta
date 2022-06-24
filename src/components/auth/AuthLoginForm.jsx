@@ -71,7 +71,7 @@ const AuthLoginForm = () => {
               </Link>
               <button
                 type="submit"
-                className="auth__button-primary"
+                className="auth__primary-button"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? <div className="animate-spin"><i className="bi bi-arrow-repeat"></i></div> : <><i className="bi bi-person"></i> Ingresar</>}

@@ -1,4 +1,5 @@
 import './App.css';
+import './styles/scss/App.scss';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import {

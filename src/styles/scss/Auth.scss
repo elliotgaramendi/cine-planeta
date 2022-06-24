@@ -135,7 +135,7 @@
     }
   }
 
-  &__button-primary {
+  &__primary-button {
     align-self: center;
     @include button(var(--primary-button-color), #0050b280, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--primary-active-button-color));
 
@@ -144,7 +144,7 @@
     }
   }
 
-  &__button-secondary {
+  &__secondary-button {
     align-self: center;
     @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--secondary-active-button-color));
 

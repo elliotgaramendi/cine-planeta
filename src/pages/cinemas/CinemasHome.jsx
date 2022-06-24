@@ -1,5 +1,3 @@
-import '../../styles/css/CinemasHome.css';
-import '../../styles/scss/CinemasHome.scss';
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import CinemasSlider from "../../components/cinemas/CinemasSlider";

@@ -5,6 +5,7 @@ import AuthFooter from "../components/sections/AuthFooter";
 import AuthHeader from "../components/sections/AuthHeader";
 import { fetchAuthLoginSuccess } from "../redux/slices/auth.slices";
 import { applicationName } from "../utils/generalInformation";
+import '../styles/scss/Auth.scss';
 
 const AuthLayout = () => {
   const dispatch = useDispatch();

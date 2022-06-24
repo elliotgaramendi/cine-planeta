@@ -9,3 +9,9 @@
     box-shadow: 0 0 0.25rem var(--secondary-active-button-color);
   }
 }
+
+@keyframes animate-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

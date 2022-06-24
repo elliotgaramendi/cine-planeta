@@ -33,13 +33,13 @@ const AuthRecoverPassword = () => {
         <div className="auth__button-container">
           <Link
             to="/autenticacion/login"
-            className="auth__button-primary"
+            className="auth__primary-button"
           >
             <i className="bi bi-person"></i> Iniciar sesión
           </Link>
           <Link
             to="/autenticacion/registro"
-            className="auth__button-secondary"
+            className="auth__secondary-button"
           >
             <i className="bi bi-person-circle"></i> Únete
           </Link>

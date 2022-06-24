@@ -1,7 +1,7 @@
 @import './mixins';
 
 .footer {
-  box-shadow: 0 0 0.75rem 0 var(--primary-shadow-color);
+  box-shadow: 0 0 0.75rem 0 var(--secondary-shadow-color);
   margin-top: auto;
   transition: var(--secondary-all-transitions);
 }

@@ -1,5 +1,3 @@
-import '../../styles/scss/Auth.scss';
-
 const AuthSection = ({ children }) => {
   return (
     <section className="auth">

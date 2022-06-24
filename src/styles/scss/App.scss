@@ -1,0 +1,45 @@
+@import './animations';
+@import './mixins';
+
+.section {
+  padding: var(--padding-section);
+
+  &__container {
+    @include d-flex-fd-ai-jc-g(column, center, stretch, 1rem);
+    @include container;
+
+    @include desktop() {
+      gap: 1.5rem;
+    }
+  }
+
+  &__title {
+    @include text(var(--primary-text-color), 700, 1.5rem, var(--secondary-font-family));
+    text-align: center;
+
+    @include desktop() {
+      font-weight: 800;
+      font-size: 3rem;
+    }
+  }
+
+  &__primary-button {
+    @include button(var(--primary-button-color), #0050b280, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--primary-active-button-color));
+
+    @include desktop() {
+      font-size: 1rem;
+    }
+  }
+
+  &__secondary-button {
+    @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--secondary-active-button-color));
+
+    @include desktop() {
+      font-size: 1rem;
+    }
+  }
+}
+
+.animate-spin {
+  animation: animate-spin 1s linear infinite;
+}

@@ -33,7 +33,7 @@ const AuthRegister = () => {
         <div className="auth__button-container">
           <Link
             to="/autenticacion/login"
-            className="auth__button-primary"
+            className="auth__primary-button"
           >
             <i className="bi bi-person"></i> Iniciar sesión
           </Link>

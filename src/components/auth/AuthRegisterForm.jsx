@@ -1,7 +1,6 @@
 import * as yup from 'yup';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useDispatch } from 'react-redux';
-// import { fetchAuthRegister } from '../../redux/slices/auth.slices';
 import { useNavigate } from 'react-router-dom';
 import { signUp } from '../../utils/firebase';
 import { fetchAuthRegisterError, fetchAuthRegisterRequest, fetchAuthRegisterSuccess } from '../../redux/slices/auth.slices';
@@ -55,7 +54,7 @@ const AuthRegisterForm = () => {
             <div className="auth__button-container auth__button-container--col-span-2">
               <button
                 type="submit"
-                className="auth__button-secondary"
+                className="auth__secondary-button"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? <div className="animate-spin"><i className="bi bi-arrow-repeat"></i></div> : <><i className="bi bi-person-circle"></i> Unirme</>}

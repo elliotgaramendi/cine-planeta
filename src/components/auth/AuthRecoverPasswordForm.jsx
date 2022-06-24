@@ -14,7 +14,7 @@ const AuthRecoverPasswordForm = () => {
       onSubmit={(values, actions) => {
         console.log(values);
         actions.setSubmitting(false);
-        // actions.resetForm();
+        actions.resetForm();
       }}
     >
       {({ handleSubmit, isSubmitting }) => {
@@ -30,13 +30,13 @@ const AuthRecoverPasswordForm = () => {
             <div className="auth__button-container">
               <Link
                 to="/autenticacion/login"
-                className="auth__button-primary auth__button-primary--outline"
+                className="auth__primary-button auth__primary-button--outline"
               >
                 Cancelar
               </Link>
               <button
                 type="submit"
-                className="auth__button-primary"
+                className="auth__primary-button"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? <i className="bi bi-arrow-repeat"></i> : <>Recuperar <i className="bi bi-chevron-right"></i></>}

@@ -5,6 +5,8 @@ import Footer from "../components/sections/Footer";
 import Header from "../components/sections/Header";
 import { fetchAuthLoginSuccess } from "../redux/slices/auth.slices";
 import { applicationName } from "../utils/generalInformation";
+import '../styles/css/Cinemas.css';
+import '../styles/scss/Cinemas.scss';
 
 const CinemasLayout = () => {
   const dispatch = useDispatch();

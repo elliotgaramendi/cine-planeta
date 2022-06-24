@@ -38,6 +38,7 @@ const CinemasCandyStore = () => {
             color: '#fff',
             confirmButtonColor: '#61dafb80',
             confirmButtonText: 'Cerrar',
+            timer: 2500
           }
         );
       } else if (result.dismiss === Swal.DismissReason.cancel) {
@@ -50,6 +51,7 @@ const CinemasCandyStore = () => {
             color: '#fff',
             confirmButtonColor: '#61dafb80',
             confirmButtonText: 'Cerrar',
+            timer: 2500
           }
         );
       }
@@ -68,7 +70,7 @@ const CinemasCandyStore = () => {
         {
           user.email &&
           <button
-            className="section__button-secondary"
+            className="section__secondary-button"
             onClick={handleClick}
           >
             Cerrar sesión

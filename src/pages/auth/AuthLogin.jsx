@@ -33,13 +33,13 @@ const AuthLogin = () => {
         <div className="auth__button-container">
           <Link
             to="/autenticacion/registro"
-            className="auth__button-secondary"
+            className="auth__secondary-button"
           >
             <i className="bi bi-person-circle"></i> Únete
           </Link>
           <Link
             to="/dulceria"
-            className="auth__button-primary auth__button-primary--outline"
+            className="auth__primary-button auth__primary-button--outline"
           >
             Seguir como invitado
           </Link>
