@@ -1,6 +1,7 @@
-import { useSelector } from "react-redux";
+import useAuth from "../../hooks/useAuth";
+
 const CinemasCandyStore = () => {
-  const { user } = useSelector(state => state.authStore);
+  const { user } = useAuth();
 
   return (
     <section className="section">

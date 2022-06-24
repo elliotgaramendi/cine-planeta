@@ -2,10 +2,10 @@ import '../../styles/scss/Header.scss';
 import { useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from "react-router-dom";
 import HeaderNavTheme from '../headers/HeaderNavTheme';
-import { useSelector } from "react-redux";
+import useAuth from '../../hooks/useAuth';
 
 const Header = ({ applicationName }) => {
-  const { user } = useSelector(state => state.authStore);
+  const { user } = useAuth();
   let location = useLocation();
   const header = useRef();
   const headerNavMenuLinkListContainer = useRef();
