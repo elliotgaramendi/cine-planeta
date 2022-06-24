@@ -48,10 +48,12 @@ export const fetchReadPremieres = () => {
     try {
       const options = {
         method: 'GET',
-        url: `/premieres`
+        url: '/discover/movie',
       };
       const { data } = await axiosInstance(options);
-      dispatch(fetchReadPremieresSuccess(data.premieres));
+      // dispatch(fetchReadPremieresSuccess(data.premieres));
+      const premieres = data.results.splice(0, 6);
+      dispatch(fetchReadPremieresSuccess(premieres));
     } catch (error) {
       dispatch(fetchReadPremieresError(error));
     }
