@@ -11,13 +11,14 @@ import AuthLayout from './layouts/AuthLayout';
 import AuthRegister from './pages/auth/AuthRegister';
 import AuthLogin from './pages/auth/AuthLogin';
 import AuthRecoverPassword from './pages/auth/AuthRecoverPassword';
+import CinemasCandyStore from './pages/cinemas/CinemasCandyStore';
 
 function App() {
   return (
     <Provider store={store}>
       <Routes>
         <Route path='/' element={<CinemasLayout />}>
-          <Route path='dulceria' element={<h1>Dulcería</h1>} />
+          <Route path='dulceria' element={<CinemasCandyStore />} />
           <Route index element={<CinemasHome />} />
           <Route path='*' element={<h1>404</h1>} />
         </Route>

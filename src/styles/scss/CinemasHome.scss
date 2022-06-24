@@ -326,3 +326,22 @@
     }
   }
 }
+
+.section {
+  padding: var(--padding-section);
+
+  &__container {
+    @include d-flex-fd-ai-jc-g(row, center, center);
+    @include container;
+  }
+
+  &__title {
+    @include text(var(--primary-text-color), 700, 1.5rem, var(--secondary-font-family));
+    text-align: center;
+
+    @include desktop() {
+      font-weight: 800;
+      font-size: 3rem;
+    }
+  }
+}
