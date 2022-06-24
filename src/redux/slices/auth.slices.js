@@ -84,6 +84,28 @@ const authSlices = createSlice({
         user: {}
       };
     },
+    fetchAuthSignInWithGoogleRequest(state, action) {
+      return {
+        ...state,
+        loading: action.payload
+      };
+    },
+    fetchAuthSignInWithGoogleSuccess(state, action) {
+      return {
+        ...state,
+        loading: false,
+        error: {},
+        user: action.payload
+      };
+    },
+    fetchAuthSignInWithGoogleError(state, action) {
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+        user: {}
+      };
+    }
   }
 });
 
@@ -97,7 +119,10 @@ export const {
   logOutAuth,
   fetchAuthRecoverPasswordError,
   fetchAuthRecoverPasswordRequest,
-  fetchAuthRecoverPasswordSuccess
+  fetchAuthRecoverPasswordSuccess,
+  fetchAuthSignInWithGoogleError,
+  fetchAuthSignInWithGoogleRequest,
+  fetchAuthSignInWithGoogleSuccess
 } = authSlices.actions;
 
 export default authSlices.reducer;

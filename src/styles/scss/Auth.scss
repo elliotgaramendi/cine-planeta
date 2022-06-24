@@ -8,6 +8,11 @@
     @include container;
   }
 
+  &__text {
+    @include text(var(--tertiary-text-color));
+    text-align: center;
+  }
+
   &__card {
     @include d-flex-fd-ai-jc-g(column, stretch, stretch, 2rem);
     max-width: 256px;

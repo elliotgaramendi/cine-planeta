@@ -34,7 +34,8 @@ const AuthRecoverPasswordForm = () => {
             color: '#fff',
             confirmButtonColor: '#61dafb80',
             confirmButtonText: '¡Continuar!',
-            timer: 5000
+            timer: 5000,
+            scrollbarPadding: false
           }).then(() => {
             navigate('/autenticacion/login');
           });

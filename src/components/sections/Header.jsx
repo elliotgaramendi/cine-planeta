@@ -121,7 +121,7 @@ const Header = ({ applicationName }) => {
               to="/autenticacion/login"
               className="header-nav__person-container"
             >
-              <span className="header-nav__person-message">{user.email ? user.email : 'Únete'}</span>
+              <span className="header-nav__person-message">{(user.displayName ?? user.email) ?? 'Únete'}</span>
               <i className="bi bi-person-circle"></i>
             </Link>
             <HeaderNavTheme />

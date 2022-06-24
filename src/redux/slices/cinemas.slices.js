@@ -32,7 +32,7 @@ const cinemasSlices = createSlice({
         error: action.payload,
         premieres: []
       };
-    },
+    }
   }
 });
 

@@ -23,7 +23,8 @@ const CinemasCandyStore = () => {
       confirmButtonText: '¡Sí!',
       cancelButtonText: '¡No!',
       reverseButtons: true,
-      timer: 5000
+      timer: 5000,
+      scrollbarPadding: false
     }).then((result) => {
       if (result.isConfirmed) {
         dispatch(logOutAuth());
@@ -38,7 +39,8 @@ const CinemasCandyStore = () => {
             color: '#fff',
             confirmButtonColor: '#61dafb80',
             confirmButtonText: 'Cerrar',
-            timer: 2500
+            timer: 2500,
+            scrollbarPadding: false
           }
         );
       } else if (result.dismiss === Swal.DismissReason.cancel) {
@@ -51,7 +53,8 @@ const CinemasCandyStore = () => {
             color: '#fff',
             confirmButtonColor: '#61dafb80',
             confirmButtonText: 'Cerrar',
-            timer: 2500
+            timer: 2500,
+            scrollbarPadding: false
           }
         );
       }
@@ -66,7 +69,7 @@ const CinemasCandyStore = () => {
   return (
     <section className="section">
       <div className="section__container">
-        <h1 className="section__title">Bienvenido {user.email ?? 'Invitado'} a la Dulcería de Cineverse</h1>
+        <h1 className="section__title">Bienvenido {(user.displayName ?? user.email) ?? 'Invitado'} a la Dulcería de Cineverse</h1>
         {
           user.email &&
           <button
