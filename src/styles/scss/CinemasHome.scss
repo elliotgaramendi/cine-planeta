@@ -331,8 +331,12 @@
   padding: var(--padding-section);
 
   &__container {
-    @include d-flex-fd-ai-jc-g(row, center, center);
+    @include d-flex-fd-ai-jc-g(column, center, stretch, 1rem);
     @include container;
+
+    @include desktop() {
+      gap: 1.5rem;
+    }
   }
 
   &__title {
@@ -342,6 +346,15 @@
     @include desktop() {
       font-weight: 800;
       font-size: 3rem;
+    }
+  }
+
+  &__button-secondary {
+    align-self: center;
+    @include button(var(--secondary-button-color), #e302467a, var(--primary-border-radius), 0.75rem, 400, 0.625em 1.125em, var(--secondary-active-button-color));
+
+    @include desktop() {
+      font-size: 1rem;
     }
   }
 }

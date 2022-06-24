@@ -53,6 +53,14 @@ const authSlices = createSlice({
         error: action.payload,
         user: {}
       };
+    },
+    logOutAuth(state) {
+      return {
+        ...state,
+        loading: false,
+        error: {},
+        user: {}
+      };
     }
   }
 });
@@ -63,7 +71,8 @@ export const {
   fetchAuthRegisterSuccess,
   fetchAuthLoginError,
   fetchAuthLoginRequest,
-  fetchAuthLoginSuccess
+  fetchAuthLoginSuccess,
+  logOutAuth
 } = authSlices.actions;
 
 export default authSlices.reducer;
