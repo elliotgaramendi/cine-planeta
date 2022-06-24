@@ -61,7 +61,29 @@ const authSlices = createSlice({
         error: {},
         user: {}
       };
-    }
+    },
+    fetchAuthRecoverPasswordRequest(state, action) {
+      return {
+        ...state,
+        loading: action.payload
+      };
+    },
+    fetchAuthRecoverPasswordSuccess(state) {
+      return {
+        ...state,
+        loading: false,
+        error: {},
+        user: {}
+      };
+    },
+    fetchAuthRecoverPasswordError(state, action) {
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+        user: {}
+      };
+    },
   }
 });
 
@@ -72,7 +94,10 @@ export const {
   fetchAuthLoginError,
   fetchAuthLoginRequest,
   fetchAuthLoginSuccess,
-  logOutAuth
+  logOutAuth,
+  fetchAuthRecoverPasswordError,
+  fetchAuthRecoverPasswordRequest,
+  fetchAuthRecoverPasswordSuccess
 } = authSlices.actions;
 
 export default authSlices.reducer;
