@@ -1,6 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../configs/authFirebase";
 
 const initialState = {
   loading: false,
@@ -59,7 +57,7 @@ const authSlices = createSlice({
   }
 });
 
-const {
+export const {
   fetchAuthRegisterError,
   fetchAuthRegisterRequest,
   fetchAuthRegisterSuccess,
@@ -67,31 +65,5 @@ const {
   fetchAuthLoginRequest,
   fetchAuthLoginSuccess
 } = authSlices.actions;
-
-export const fetchAuthRegister = (user) => {
-  return (async (dispatch) => {
-    dispatch(fetchAuthRegisterRequest(true));
-    try {
-      const { email, password } = user;
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      dispatch(fetchAuthRegisterSuccess(userCredential.user.reloadUserInfo));
-    } catch (error) {
-      dispatch(fetchAuthRegisterError(error));
-    }
-  });
-};
-
-export const fetchAuthLogin = (user) => {
-  return (async (dispatch) => {
-    dispatch(fetchAuthLoginRequest(true));
-    try {
-      const { email, password } = user;
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      dispatch(fetchAuthLoginSuccess(userCredential.user.reloadUserInfo));
-    } catch (error) {
-      dispatch(fetchAuthLoginError(error));
-    }
-  });
-};
 
 export default authSlices.reducer;

@@ -1,8 +1,10 @@
 import * as yup from 'yup';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useDispatch } from 'react-redux';
-import { fetchAuthRegister } from '../../redux/slices/auth.slices';
+// import { fetchAuthRegister } from '../../redux/slices/auth.slices';
 import { useNavigate } from 'react-router-dom';
+import { signUp } from '../../utils/firebase';
+import { fetchAuthRegisterError, fetchAuthRegisterRequest, fetchAuthRegisterSuccess } from '../../redux/slices/auth.slices';
 
 const AuthRegisterForm = () => {
   const dispatch = useDispatch();
@@ -19,10 +21,16 @@ const AuthRegisterForm = () => {
         password: yup.string().required('La contraseña es requerido').min(6)
       })}
       onSubmit={async (values, actions) => {
-        await dispatch(fetchAuthRegister(values));
-        actions.setSubmitting(false);
-        actions.resetForm();
-        navigate('/dulceria');
+        try {
+          dispatch(fetchAuthRegisterRequest(true));
+          const userCredential = await signUp(values);
+          dispatch(fetchAuthRegisterSuccess(userCredential.user.reloadUserInfo));
+          actions.setSubmitting(false);
+          actions.resetForm();
+          navigate('/dulceria');
+        } catch (error) {
+          dispatch(fetchAuthRegisterError(error));
+        }
       }}
     >
       {({ handleSubmit, isSubmitting }) => {
