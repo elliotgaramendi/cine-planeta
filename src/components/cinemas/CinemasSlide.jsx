@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const CinemasSlide = ({ premiere }) => {
   // const { description, image } = premiere;
-  const { title, poster_path, overview } = premiere;
-  const imageEndpoint = `https://image.tmdb.org/t/p/original${poster_path}`;
+  const { title, backdrop_path, overview } = premiere;
+  const imageEndpoint = `https://image.tmdb.org/t/p/original${backdrop_path}`;
 
   return (
     <div className="slick-slider__slide-container">

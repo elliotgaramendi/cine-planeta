@@ -28,7 +28,7 @@ const CinemasSlider = ({ premieres }) => {
       {premieres.map((premiere) => {
         return (
           <CinemasSlide
-            key={premiere.description}
+            key={premiere.id}
             premiere={premiere}
           />
         );

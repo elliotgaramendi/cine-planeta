@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AuthCard from '../../components/auth/AuthCard';
 import AuthCardHeader from '../../components/auth/AuthCardHeader';
-import AuthRegisterForm from '../../components/auth/AuthRegisterForm';
 import AuthSection from '../../components/auth/AuthSection';
 
 const AuthRegister = () => {
@@ -17,10 +16,9 @@ const AuthRegister = () => {
         <AuthCardHeader
           content={{
             title: 'Únete',
-            message: 'Completa tus datos y accede a nuestro universo de beneficios'
+            message: 'Pronto implementaremos esta sección para que puedas crear tu cuenta y disfrutar de los beneficios de ser parte de nuestro programa Socio Cineverse.'
           }}
         />
-        <AuthRegisterForm />
       </AuthCard>
       <AuthCard>
         <AuthCardHeader

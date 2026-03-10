@@ -8,7 +8,7 @@ const CinemasGallery = ({ premieres }) => {
         <div className="home-gallery__cards-container">
           {premieres.map((premiere) => {
             return (
-              <CinemasCard key={premiere.description} premiere={premiere} />
+              <CinemasCard key={premiere.id} premiere={premiere} />
             );
           })}
         </div>

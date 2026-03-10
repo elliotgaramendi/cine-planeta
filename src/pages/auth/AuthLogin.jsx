@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AuthCard from '../../components/auth/AuthCard';
 import AuthCardHeader from '../../components/auth/AuthCardHeader';
-import AuthLoginForm from '../../components/auth/AuthLoginForm';
 import AuthSection from '../../components/auth/AuthSection';
 
 const AuthLogin = () => {
@@ -17,10 +16,9 @@ const AuthLogin = () => {
         <AuthCardHeader
           content={{
             title: 'Iniciar sesión',
-            message: 'Ingresa a tu cuenta para disfrutar de tus beneficios, acumular puntos y vivir al máximo la experiencia Cineverse.'
+            message: 'Pronto implementaremos esta sección para que puedas iniciar sesión y disfrutar de todos los beneficios que tenemos para ti. Mientras tanto, puedes seguir explorando nuestro sitio como invitado.'
           }}
         />
-        <AuthLoginForm />
       </AuthCard>
       <AuthCard>
         <AuthCardHeader
